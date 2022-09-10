@@ -14,8 +14,12 @@ public class Prog54B {
         System.out.println("What is the fourth number?");
         int D = scan.nextInt();
         int num1 = A + B + C + D;
+      double average = (double)num1 / 4;
+      System.out.println("The sum of the four numbers is: " + num1);
+      System.out.println("The average of the four numbers is: " + average);
 
 
     }
 
 }
+
