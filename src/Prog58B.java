@@ -8,7 +8,7 @@ public class Prog58B {
         double A = scan.nextDouble();
 
         System.out.print("What is B? ");
-
+        double B = scan.nextDouble();
  
         System.out.print("What is C?");
         double C = scan.nextDouble();
