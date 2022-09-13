@@ -1,3 +1,4 @@
+
 //Nicole de la Mora, 9//12//22 Prog58h
 import java.util.Scanner;
 
@@ -16,14 +17,13 @@ public class Prog58h {
     double t = scan.nextDouble();
     System.out.println("What is the  number of days compounded per year?");
     double n = scan.nextDouble();
-  //math
-    double ex = (n * t) / 365;
-    double ar = (0.01 * r) / n;
-    //double a = p * (1 + Math.pow(ar, ex));
-
-    double a = p*((1+(Math.pow((n*t/365) , (0.01*r)/n))));
-
+    // math
+    double a = p * ((1 + (Math.pow((n * t / 365), (0.01 * r) / n))));
     double i = a - p;
+
+    System.out.printf("a = %.2f\n");
+    System.out.printf("i = %.2f\n");
+
     // output
     System.out.println("Amount saved: " + p);
     System.out.println("Intrest Rate: " + r);
