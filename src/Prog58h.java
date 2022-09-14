@@ -32,4 +32,5 @@ public class Prog58h {
     System.out.println("Intrest earned: " + i);
     System.out.println("The total amount in savings: " + a);
   }
+  
 }
