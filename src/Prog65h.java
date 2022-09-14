@@ -19,19 +19,22 @@ ex: what used to be 5.2.8 (pound.shilling.pence) is now 5.13
     double pence = scan.nextDouble();
     double tot = 0;
 
-    //convert all to pence, multiply by 0.01
-    //pund/20 + shill = shill
-    //shill / 12 + pence = pence
-    //shill = pund*20 + shill;
-    //pence = shill*12 + pence;
-    //tot = pence * 0.01;
-//pence / 12 = shill
-    //shill / 20  = pound
+
     shill = pence / 12 + shill;
     pund = shill/20 + pund;
 
+
     
-    System.out.println("Decimal pounds = " + tot);
+    System.out.printf("Decimal pounds = %.2f\n", pund);
     
   }
 }
+/*
+Enter pounds:
+7
+Enter shillings:
+17
+Enter pence:
+9
+Decimal pounds = 7.89
+ */
