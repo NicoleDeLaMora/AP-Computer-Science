@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Prog58h {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    // to much booty in the pants!
-    // DANCE!!
+
 
     // input/
     System.out.println("What is the amount? ");
