@@ -13,6 +13,12 @@ public class PROG93a {
          */
         System.out.println("What is the Kilowatts used?");
         int used = scan.nextInt();
-        System.out.println("What is the ");
+        double cph = 0.0475;
+        double surcharge = 0.1;
+        double taxP = 0.03;
+        double lateP = 0.04;
+
+        double baserate = used * cph;
+        //USE SANP CODE :)
     }
 }
