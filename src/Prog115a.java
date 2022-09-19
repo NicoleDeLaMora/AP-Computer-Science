@@ -1,4 +1,4 @@
-//Nicole de la Mora // 9/19/22 // prog 115a
+//Nicole de la Mora // 9/19/22 // Program 115a
 public class Prog115a {
 public static void main(String[] args){
     int lcv = 0; //LCV: loop control varient
