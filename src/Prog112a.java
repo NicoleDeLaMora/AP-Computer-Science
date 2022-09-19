@@ -1,7 +1,7 @@
 public class Prog112a {
 public static void main(String[] args){
     System.out.println("Number     Square     Squareroot");
-    int lcv = 1;
+    int lcv = 0;
     int sq = 0;
     double sqr = 0;
     while (lcv < 50){
@@ -15,6 +15,7 @@ public static void main(String[] args){
 }
 /*
 Number     Square     Squareroot
+1          1          1.0
 2          4          1.4142135623730951
 3          9          1.7320508075688772
 4          16          2.0
