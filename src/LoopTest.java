@@ -2,7 +2,7 @@ public class LoopTest {
     public static void main(String[] args){
         int lcv = 1;
         while (lcv <= 10){
-            System.out.println(lcv + "  ");
+            System.out.print(lcv + "  ");
             lcv++;
         }
         System.out.println();

@@ -6,8 +6,11 @@ public class Prog122deez {
 
         while ( lcv < 28 ){
             int x = -12;
-            //double y = Math.pow(x, 6) - (3*Math.pow(x,5)) - (93 * (x,4) + (87 * Math.pow(x, 3)) + (1596 * Math.pow(x,2)) - (1380 * x) -2800;
+            double y = Math.pow(x, 6) - (3*Math.pow(x,5)) - (93 * Math.pow(x,4)) + (87 * Math.pow(x, 3)) + (1596 * Math.pow(x,2)) - (1380 * x) - 2800;
+
+            System.out.println(x + "       " + y);
             lcv+=1;
+            x++;
         }
     }
 }

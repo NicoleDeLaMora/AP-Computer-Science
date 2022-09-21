@@ -1,5 +1,5 @@
-//Nicole de la Mora // 9/19/22 // Program 115a
-public class Prog115a {
+//Nicole de la Mora // 9/19/22 // Program 115a and 115B
+public class Prog115AandB {
 public static void main(String[] args){
     int lcv1 = 0; // one for horizontal 
 int lcv = 0; //LCV: loop control varient
@@ -8,7 +8,7 @@ int lcv = 0; //LCV: loop control varient
         System.out.println(lcv);
     }
 while (lcv1 < 36){
-lcv +=2
+lcv +=2;
 System.out.println(lcv1);
 } 
 }
