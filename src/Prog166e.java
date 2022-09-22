@@ -21,7 +21,7 @@ public class Prog166e {
             }
             c = (double)a / b;
             System.out.printf("%d/%d\t\t%.5f\n", a, b, c);
-            //%d = make it an integer   \t = tab, just makes a space  .5f = 5 decimal places  \n = new libe
+            //%d = make it an integer   \t = tab, just makes a space  .5f = 5 decimal places  \n = new line
 
 
         }
