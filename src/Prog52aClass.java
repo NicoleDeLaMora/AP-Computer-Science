@@ -1,5 +1,6 @@
 //Nicole de la Mora // 10/17/
 import java.util.*;
+import static java.lang.System.out; //makes it so you dont have to do the System |||| DO NOT USE ON AP THINGY
 public class Prog52aClass {
     //driver program
     public static void main(String[] args){
@@ -11,7 +12,7 @@ public class Prog52aClass {
         int len = scan.nextInt();
         System.out.print("Please enter a width: ");
         int wid = scan.nextInt();
-        System.out.println();
+        out.println();  //used
         cl52a wow = new cl52a(wid, len);
         //acsesses width and length, delivers it to the cl52a
 
@@ -25,6 +26,7 @@ public class Prog52aClass {
          System.out.println("Perimeter: " + perim);
 
         //make a new object (instance) of cl52a (Instatiate the class)
+
 
 
 
