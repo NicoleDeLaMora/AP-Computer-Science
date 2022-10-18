@@ -29,6 +29,14 @@ public class cl52a {
     public int getArea(){return area;}
     public int getPerim(){return perim;}
 
+    //override method
+    public String toString() {
+        return String.format("Area: %s\nPerimeter: %s", area, perim);
+    }
+    public void print(){
+        System.out.println(this.toString());
+        // look at THIS class,
+    }
 }
 
 /*
@@ -36,6 +44,6 @@ class :
 
  - always has privte data
  - constructors
- - medifiers (mutators)
+ - medifiers (mutators)dfg
  - accsesors
  */

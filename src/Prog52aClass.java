@@ -22,8 +22,8 @@ public class Prog52aClass {
 
          int area = wow.getArea();
          int perim = wow.getPerim();
-         System.out.println("Area: " + area);
-         System.out.println("Perimeter: " + perim);
+       //  System.out.println("Area: " + area);
+        // System.out.println("Perimeter: " + perim);
 
         //make a new object (instance) of cl52a (Instatiate the class)
 
