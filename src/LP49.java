@@ -1,4 +1,4 @@
-//nicole de la Mora//LP4-9
+//nicole de la mora//LP4-9
 import java.util.*;
 public class LP49 {
     public static void main(String[] args){
