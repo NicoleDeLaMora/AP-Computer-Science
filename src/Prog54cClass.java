@@ -6,7 +6,7 @@ public class Prog54cClass {
         System.out.println("what is the radius? ");
         double rad = scan.nextDouble();
 
-        Prog54c wow = new prog54aClass(a1, b1, c1, d1);
+        Prog54cClass wow = new Prog54cClass(RADIUS);
 
     }
 
