@@ -11,4 +11,6 @@ public class Prog76aaCL {
         myTot = (myNum * 9) * 12345679;
     }
     public int getTOT(){return myTot;}
+
+  
 }
