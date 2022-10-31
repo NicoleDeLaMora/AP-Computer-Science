@@ -5,8 +5,8 @@ public class Prog76aCL{
   private int tot123;
 
 
-  public Prog76aCl(){
+  //public Prog76aCl(){
     
-  } 
+  //}
   
 }
