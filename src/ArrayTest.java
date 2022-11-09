@@ -25,7 +25,7 @@ public class ArrayTest {
         }
     }
 }
-/*
+/*dfgdfg
 an int is 32 bits, when making a new aray, you make the size of data type *
 if 100 spaces, it uses 400 bits of ram
  */

@@ -27,7 +27,7 @@ public class Prog213fArray {
             System.out.println("Can't find data file!");
         }
     }
-}
+}//fff
 /*
 C:\Users\delamora.n\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=52325:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\delamora.n\Desktop\AP Computer Science\out\production\AP Computer Science" Prog213fArray
 The cost of 387.0 is $270.9
