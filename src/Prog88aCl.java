@@ -1,4 +1,4 @@
-t//Nicole de la Mora // 11/3//22 // Prog 88a Class
+//Nicole de la Mora // 11/3//22 // Prog 88a Class
 public class Prog88aCl {
   private int sum;
   private int dif;

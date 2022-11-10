@@ -1,6 +1,7 @@
 
 //Nicole de la Mora // 11/3//22 // Prog 88a Class
 //Driver
+/*
 import java.util.*;
 
 public class Prog88aClass {
@@ -20,7 +21,8 @@ public class Prog88aClass {
     double ave = wow.getAver();
     int dis = wow.getDis();
     int max = wow.getMax();
-    
-    
+
+
   }
 }
+ */

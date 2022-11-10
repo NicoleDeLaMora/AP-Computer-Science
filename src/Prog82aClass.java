@@ -1,4 +1,6 @@
 //Nicole de la Mora // 11/1/21 // Prog 82a Classes
+
+/*
 import java.util.*;
 public class Prog82aClass{
   public static void main(String[] args){
@@ -13,7 +15,8 @@ public class Prog82aClass{
     double fine= wow.getFine();
     System.out.print("Fine------------" );
     System.out.printf("%.5f", fine);
-    
-    
+
+
   }
 }
+ */
