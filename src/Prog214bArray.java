@@ -11,14 +11,14 @@ public class Prog214bArray {
 
                     while (input.hasNext()){
 
-                        int badge = input.nextInt();
+                        double badge = (double)input.nextInt();
                         double ytd = input.nextDouble();
                         double bpay = input.nextDouble();
                         double shitCode = input.nextDouble();
                         double hrWorked = input.nextDouble();
 
-                      // CL213f yikes = new CL213f(badge, ytd, bpay, shitCode, hrWorked);
-                       // list[cnt] = yikes;
+                       CL213f yikes = new CL213f(badge, ytd, bpay, shitCode, hrWorked);
+                        list[cnt] = yikes;
                     }
         } catch (IOException e) {
             System.out.println("Can't find data file!");

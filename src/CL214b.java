@@ -7,13 +7,13 @@ public class CL214b {
     private double netPAY;
 
     //given:
-    private int empNUM;
+    private double empNUM;
     private double ytd;
     private double bpRATE;
     private double hrWork;
     private double shift;
 
-    public CL214b(int eNum, double ytdPAY, double bpR, double hrW, double shit){
+    public CL214b(double eNum, double ytdPAY, double bpR, double hrW, double shit){
         empNUM = eNum;
         ytd = ytdPAY;
         bpRATE = bpR;
@@ -47,21 +47,10 @@ public class CL214b {
 
 
     }
+
+    public double getGross(){return Gross;}
+    public double getTax(){return withTAX;}
+    public double getSsTAX(){return ssTAX;}
+    public double getPay(){return netPAY;}
 }
-/*
-The social security tax (FICA tax) depends on the gross pay and the year-to-date pay.
-If the year-to-date pay is greater than $17,300, then there is no social security tax.
-If the year-to-date pay plus the gross pay is less than or equal to $17,300, then the
- social security tax is 6.05% of the gross pay.
 
-  If the year-to-date pay is less then $17,300, but the sum of the year-to-date pay and
-  gross pay is greater than $17,300,  then the tax is 6.05% of the difference between
-  $17,300 and the year-to-date pay plus the gross pay.
-
- if (ytd > 17300){
- ss = 0;
- if (ytd + gross <= 17300){
- ss = gross * 0.0605
- if(ytd + gross > 17300){
- ss = 0.0605 * (17300 - ytd+gross);
- */

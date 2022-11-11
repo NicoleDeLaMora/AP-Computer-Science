@@ -32,7 +32,8 @@ public class prog435g {
 
             CL435g[] golfers = new CL435g[count];
             for(int lcv = 0; lcv<count; lcv++){
-                golfers[lcv] = new CL435g(scores[lcv]);
+                CL435g myguy = new CL435g(scores[lcv]);
+                golfers[lcv] = myguy;
             }
 
             int rank = 1;
@@ -41,10 +42,11 @@ public class prog435g {
                 if (lcv < count - 1 && scores[lcv] != scores[lcv+1]){
                     rank++;
                 }
-                System.out.println("Score\t\tRank");
-                for(int lvc = 0; lvc < count; lvc++){
-                    System.out.println(golfers[lvc].toString());
-                }
+
+            }
+            System.out.println("Score\tRank");
+            for(int lvc = 0; lvc < count; lvc++){
+                System.out.println(golfers[lvc].toString());
             }
 
         } catch (
@@ -54,3 +56,41 @@ public class prog435g {
     }
 
 }
+/*
+C:\Users\delamora.n\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=49249:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\delamora.n\Desktop\AP Computer Science\out\production\AP Computer Science" prog435g
+Score	Rank
+66		1
+66		1
+66		1
+66		1
+66		1
+66		1
+66		1
+66		1
+66		1
+66		1
+66		1
+66		1
+66		1
+68		2
+68		2
+68		2
+68		2
+68		2
+68		2
+68		2
+68		2
+68		2
+68		2
+68		2
+68		2
+68		2
+87		3
+88		4
+88		4
+88		4
+88		4
+
+Process finished with exit code 0
+
+ */
