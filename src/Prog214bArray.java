@@ -17,8 +17,8 @@ public class Prog214bArray {
                         double shitCode = input.nextDouble();
                         double hrWorked = input.nextDouble();
 
-                       CL213f yikes = new CL213f(badge, ytd, bpay, shitCode, hrWorked);
-                        list[cnt] = yikes;
+                       //CL213f yikes = new CL213f(badge, ytd, bpay, shitCode, hrWorked);
+                       // list[cnt] = yikes;
                     }
         } catch (IOException e) {
             System.out.println("Can't find data file!");
