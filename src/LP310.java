@@ -22,9 +22,18 @@ public class LP310 {
     }
    public void calc(){
         cost = (fry * 1.09) + (burger * 1.69) + (soda * 0.99);
-
+        costTAX = cost * 0.065;
     }
 
+    public double getCost(){return cost;}
+    public double getTAX(){return costTAX;}
+    public double getCostTAX(){return cost + costTAX;}
+
+    public double tenders(double amo){
+        tend = amo;
+        change = tend - getCostTAX();
+        return change;
+    }
 
 
 }

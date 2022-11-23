@@ -43,7 +43,7 @@ public class NumberCubeMain {
         for(int temp : y){
             System.out.print(temp + " ");
         }
-        System.out.println("\nLongest run: " + getLongestRun());
+        System.out.println("\nLongest run: " + getLongestRun(y));
     }
 
 

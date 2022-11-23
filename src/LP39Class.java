@@ -25,6 +25,6 @@ public class LP39Class {
         int mt = tm * 30;
         int mb = bm*30;
 
-        int d =
+        //int d =
     }
 }
