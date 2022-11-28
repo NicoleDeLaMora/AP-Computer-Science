@@ -8,6 +8,9 @@ public class MSOE1 {
         if(str.substring(0,1).equals(str.substring(str.length()-1, str.length()))){
 
         }
-        for(int lxv = 0)
+        for(int lcv = 0; lcv<0;){
+            int f = 0;
+            lcv++;
+        }
     }
 }
