@@ -8,8 +8,10 @@ public class LP39Class {
     private int tm;
     private int td;
 
-    private int totslept;
-    private int totalive;
+    private double totSlept;
+    private int totAlive;
+
+
 
     public LP39Class(int bity, int bitm, int bitd, int tdy, int tdm, int tdd){
          by = bity;
@@ -21,10 +23,15 @@ public class LP39Class {
          td = tdd;
     }
     public void calc(){
-        int y = ty - by;
-        int mt = tm * 30;
-        int mb = bm*30;
+        int birth = (by * 365) + (bm * 30) + bd;
+        int today = (ty * 365) + (tm * 30) + td;
+
+        totAlive = today - birth;
+        totSlept = (totAlive * 24) / 8;
 
         //int d =
     }
+
+    public int areyouALIVE(){return totAlive;}
+    public double areyouSLEEPING(){return totSlept;}
 }
