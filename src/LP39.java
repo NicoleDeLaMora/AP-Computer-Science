@@ -28,7 +28,5 @@ public class LP39 {
         System.out.println("You have been asleep for: " + wow.areyouSLEEPING() + " hours");
 
 
-
-
     }
 }

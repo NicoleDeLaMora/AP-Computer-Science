@@ -11,8 +11,6 @@ public class LP39Class {
     private double totSlept;
     private int totAlive;
 
-
-
     public LP39Class(int bity, int bitm, int bitd, int tdy, int tdm, int tdd){
          by = bity;
          bm = bitm;
@@ -27,9 +25,8 @@ public class LP39Class {
         int today = (ty * 365) + (tm * 30) + td;
 
         totAlive = today - birth;
-        totSlept = (totAlive * 24) / 8;
+        totSlept = ((double)totAlive * 24) - (totAlive);
 
-        //int d =
     }
 
     public int areyouALIVE(){return totAlive;}
