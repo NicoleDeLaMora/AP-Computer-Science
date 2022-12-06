@@ -6,7 +6,16 @@ public class Prog410t {
     public static void main(String[] args){
         try {  // On Replit, may need to put "../data/prog285b.dat"
             Scanner input = new Scanner(new File("data/survey.dat"));
-            ArrayList<>
+            ArrayList<Integer> id = new ArrayList<Integer>();
+            ArrayList<Integer> sal = new ArrayList<Integer>();
+            ArrayList<Integer> members = new ArrayList<Integer>();
+
+           /* while (input.hasNext()){
+                for(int lcv = 0; lcv;){
+                    for()
+                }
+            }
+*/
         } catch (IOException e) {
             System.out.println("Can't find data file!");
         }
