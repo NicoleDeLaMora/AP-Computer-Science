@@ -30,3 +30,15 @@ public class LP39 {
 
     }
 }
+/*
+Enter your Birthdate:
+Year: 1997
+Month: 02
+Day: 12
+Enter todays date:
+Year: 2012
+Month: 08
+Day: 03
+You have been alive for: 5646 days
+You have been asleep for: 45168.0 hours
+ */

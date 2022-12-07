@@ -18,10 +18,22 @@ public class Prog410t {
                    members.add(input.nextInt());
                }
             }
-               System.out.println("id\t\tincome\t\tmembers")
+               System.out.println("id\t\tincome\t\tmembers");
             for(int lcv = 0; lcv<id.size(); lcv++){
                 System.out.printf("\n%d\t\t\t%d\t%d", id.get(lcv), sal.get(lcv), members.get(lcv));
             }
+            double income = 0;
+            for(int x : sal){
+                income += x;
+            }
+            income /= sal.size();
+            System.out.println("Households with income exceeding the income of " + income + ": ");
+            /*for(int lcv = 0; lcv<sal.size(); lcv++){
+                if(sal.get(lcv) > income){
+
+                }
+            }
+*/
         } catch (IOException e) {
             System.out.println("Can't find data file!");
         }

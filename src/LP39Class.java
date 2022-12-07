@@ -21,12 +21,19 @@ public class LP39Class {
          td = tdd;
     }
     public void calc(){
-        int birth = (by * 365) + (bm * 30) + bd;
-        int today = (ty * 365) + (tm * 30) + td;
+        int difYear = ( ty-by ) * 365;
+        int difMonth = (tm-bm) * 30;
+        int difDay = td - bd;
 
-        totAlive = today - birth;
-        totSlept = ((double)totAlive * 24) - (totAlive);
-
+        totAlive = difYear + difMonth + difDay;
+        totSlept = totAlive * 8;
+/*
+difYear = (myCurYear- myYear) * 365;
+        difMonth = (myCurMonth - myMonth) * 30;
+        difDay = myCurDay - myDay ;
+        myTotDay = difDay+ difMonth + difYear ;
+        myTotHours = myTotDay *8;
+ */
     }
 
     public int areyouALIVE(){return totAlive;}
