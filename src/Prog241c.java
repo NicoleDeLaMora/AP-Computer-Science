@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Prog241c {
-    public static  void main(String[] args){
+    public static void main(String[] args) {
     /*
     A service station with a car wash sells three grades of gasoline:
     regular unleaded at $1.359 per gallon,
@@ -21,6 +21,7 @@ public class Prog241c {
       and then print the total charges in the form of an invoice
 
      */
+        /*
         try {  // On Replit, may need to put "../data/prog285b.dat"
             Scanner input = new Scanner(new File("data/prog214c.dat"));
 
@@ -55,5 +56,7 @@ public class Prog241c {
             System.out.println("Can't find data file!");
         }
 
+    }*/
     }
 }
+

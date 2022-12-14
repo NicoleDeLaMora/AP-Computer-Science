@@ -29,6 +29,7 @@ public class StudentDatabase {
 
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
+        ArrayList<Student> db = new ArrayList<Student>();
         while (true){  //infinite loop
             System.out.println("\nStudent Menu:\n");
             System.out.println("1 - Ass new Student");
@@ -40,7 +41,6 @@ public class StudentDatabase {
             System.out.println("7 - Exit\n\nPlease enter your choice:");
             int c = input.nextInt();
 
-            ArrayList<Student> db = new ArrayList<Student>();
 
             if(c==1){
                 System.out.print("Enter First Name: ");
@@ -55,7 +55,7 @@ public class StudentDatabase {
                 db.add(st);
 
             }else if (c==2){
-                System.out.println("First\n Last\nID\nGPA\n");
+                System.out.println("First\t Last\tID\tGPA\t");
                 for(Student stu : db){
                     PrintStu(stu);
                 }
@@ -67,6 +67,7 @@ public class StudentDatabase {
                 if (index != -1){
                     PrintStu(db.get(index));
                 }else System.out.print("No Student Was Found With That ID.");
+
             }else if (c==4){
                 System.out.print("Enter the Student's Last Name: ");
                 String Last = input.next();
@@ -74,9 +75,29 @@ public class StudentDatabase {
                 if(index!=-1){
                     PrintStu(db.get(index));
                 }else System.out.print("No Student Was Found With That Last Name.");
+
             }else if (c==5){
+                System.out.print("Enter Student ID: ");
+                int id = input.nextInt();
+                int index = indexOfStudent(db, id);
+                if (index == -1){
+                    System.out.println("No Student Was Found With That ID.");
+                } else {
+                    System.out.print("Enter GPA: ");
+                    double gpa = input.nextDouble();
+                    db.get(index).setGPA(gpa);
+                    System.out.println("GPA Updated Successfully");
+                }
 
             }else if (c==6){
+                System.out.print("Enter Student ID: ");
+                int id = input.nextInt();
+                int index = indexOfStudent(db, id);
+                if (index == -1){
+                    System.out.println("No Student Was Found With That ID.");
+                }else {
+                    db.remove(index);
+                }
 
             }else if(c==7){
             return;

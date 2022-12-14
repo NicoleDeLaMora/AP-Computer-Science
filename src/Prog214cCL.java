@@ -9,13 +9,13 @@ public class Prog214cCL {
     //rivate ArrayList<String> ALtype;
     //private ArrayList<String> ALWash;
     //private ArrayList<Double> ALGal;
-
+/*
 public class Prog213cCL(String typers, String washers, double gallons){
     type = typers;
     Wash = washers;
     galCost = gallons;
 }
-
+*/
 
 
 
