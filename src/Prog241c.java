@@ -15,28 +15,26 @@ public class Prog241c {
             ArrayList<Integer> count = new ArrayList<Integer>();
 
 
-            while(input.hasNext()) {
-                for(int lcv = 0;){ //FIX THIS
+            while (input.hasNext()) {
+                for (int lcv = 0; ) { //FIX THIS
                     type.add(input.nextLine());
                     gal.add(input.nextDouble());
                     wash.add(input.nextLine());
                     count.add(lcv);
 
+
+                    int x = 1;
+                    for (x : count)
+                        Prog214cCL wow = new Prog214cCL(type.get(x), wash.get(x), gal.get(x));
                 }
             }
-            while(input.hasNext()) {
-                for(int x : count)
-                Prog214cCL wow = new Prog214cCL(type.get(x), wash.get(x), gal.get(x));
 
+
+            } catch(IOException e){
+                System.out.println("Can't find data file!");
             }
 
-
-
-        } catch (IOException e) {
-            System.out.println("Can't find data file!");
         }
+    }
 
-    }
-    }
-}
 

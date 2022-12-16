@@ -1,7 +1,10 @@
 import java.util.*;
+
+
+
 public class Prog214cCL {
     private String type;
-    private String Wash;
+    private String wash;
     private double galCost;
     private double Cost;
     private double gal;
@@ -10,29 +13,46 @@ public class Prog214cCL {
     //private ArrayList<String> ALWash;
     //private ArrayList<Double> ALGal;
 
-public class Prog213cCL(String typers, String washers, double gallons){
+public void Prog213cCL(String typers, String washers, double gallons){
 
         type = typers;
-        Wash = washers;
+        wash = washers;
         gal = gallons;
 
 }
-public static double CalcGas(){
-    return type * gal;
+public double CalcGas(){
+    if(type.equals("P")){
+        return (1.479 * gal);
+    }else if(type.equals("R")){
+        return (1.359 * gal);
+    }else return (1.429 * gal);
 }
-public static double CalcWash(){
-    if(Wash.equals("Y")){
+
+public double CalcWash(){
+    if(wash.equals("Y")){
 
         if(gal >= 20){
             return 0.0;
-        }else if()
-
-
+        }else if(gal >= 10){
+            return ((200 * (10 * Math.floor(gal-10)) / 100));
+        }else return 2.00;
     }else return 0.0;
 }
 
+public String ticket(){
+    System.out.print("COMPSCI PETROLEUM COMPANY\n");
+    System.out.print("----------------------------\n")
+    if(type.equals("P")){
+System.out.print("");
+    }else if(type.equals("R")){
+        System.out.print("");
+    }else System.out.print("");
 
-    /*
+
+}
+
+/*
+
     A service station with a car wash sells three grades of gasoline:
     regular unleaded at $1.359 per gallon,
     premium at $1.479 per gallon,
@@ -47,9 +67,11 @@ public static double CalcWash(){
       read another character indicates whether or not the customer wants a car wash,
       and then print the total charges in the form of an invoice
 
-     */
+*/
 
 
 
 
 }
+
+
