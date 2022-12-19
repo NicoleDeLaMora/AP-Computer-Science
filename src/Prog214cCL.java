@@ -8,6 +8,7 @@ public class Prog214cCL {
     private double galCost;
     private double Cost;
     private double gal;
+    private double total;
 
     //rivate ArrayList<String> ALtype;
     //private ArrayList<String> ALWash;
@@ -39,14 +40,27 @@ public double CalcWash(){
     }else return 0.0;
 }
 
+public double calcTOT(){
+
+    total = CalcGas() + CalcWash();
+    return total;
+}
+
+
 public String ticket() {
     System.out.print("COMPSCI PETROLEUM COMPANY\n");
     System.out.print("----------------------------\n");
     if (type.equals("P")) {
-        System.out.print("");
+        System.out.print("Premium \t\t" + gal + "gallons @ 1.479\n");
     } else if (type.equals("R")) {
-        System.out.print("");
-    } else System.out.print("");
+        System.out.print("Regular \t\t " + gal + "gallons @ 1.359\n");
+    } else System.out.print("High Octane \t\t " + gal + "gallons @ 1.429\n");
+    System.out.print("----------------------------\n");
+    System.out.print("Gasoline\t\t\t" + this.galCost + "\n");
+    System.out.print("Wash" + wash + "\t\t\t" + this.CalcWash() + "\n");
+    System.out.print("\t\t\t\t___");
+    System.out.println("Total Due: \t\t\t" + this.calcTOT());
+    System.out.print("----------------------------\n");
 
 return "0";
 }
