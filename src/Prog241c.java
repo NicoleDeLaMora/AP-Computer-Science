@@ -14,7 +14,7 @@ public class Prog241c {
             ArrayList<Double> gal = new ArrayList<Double>();
             ArrayList<Integer> count = new ArrayList<Integer>();
 
-/*
+
             while (input.hasNext()) {
                 for (int lcv = 0; ) { //FIX THIS
                     type.add(input.nextLine());
@@ -28,7 +28,7 @@ public class Prog241c {
                         Prog214cCL wow = new Prog214cCL(type.get(x), wash.get(x), gal.get(x));
                 }
             }
-*/
+
 
             } catch(IOException e){
                 System.out.println("Can't find data file!");
