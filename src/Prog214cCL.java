@@ -39,16 +39,16 @@ public double CalcWash(){
     }else return 0.0;
 }
 
-public String ticket(){
+public String ticket() {
     System.out.print("COMPSCI PETROLEUM COMPANY\n");
-    System.out.print("----------------------------\n")
-    if(type.equals("P")){
-System.out.print("");
-    }else if(type.equals("R")){
+    System.out.print("----------------------------\n");
+    if (type.equals("P")) {
         System.out.print("");
-    }else System.out.print("");
+    } else if (type.equals("R")) {
+        System.out.print("");
+    } else System.out.print("");
 
-
+return "0";
 }
 
 /*
