@@ -24,7 +24,6 @@ public class Prog241c {
             }
 
 
-
          // for(int x : count){
             Prog214cCL wlw = new Prog214cCL(type.get(0), wash.get(0), gal.get(0));  //wrong
             wlw.ticket();                        //wrong
@@ -37,5 +36,3 @@ public class Prog241c {
 
         }
     }
-
-
