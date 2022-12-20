@@ -14,20 +14,21 @@ public class Prog241c {
             ArrayList<Double> gal = new ArrayList<Double>();
             ArrayList<Integer> count = new ArrayList<Integer>();
 
-
+            int lcv = 0;
             while (input.hasNext()) {
-                for (int lcv = 0; ) { //FIX THIS
                     type.add(input.nextLine());
-                    gal.add(input.nextDouble());
+                    gal.add(input.nextDouble()); //wrong
                     wash.add(input.nextLine());
                     count.add(lcv);
-
-
-                    int x = 1;
-                    for (x : count)
-                        Prog214cCL wow = new Prog214cCL(type.get(x), wash.get(x), gal.get(x));
-                }
+                    lcv++;
             }
+
+
+
+         // for(int x : count){
+            Prog214cCL wlw = new Prog214cCL(type.get(0), wash.get(0), gal.get(0));  //wrong
+            wlw.ticket();                        //wrong
+            // }
 
 
             } catch(IOException e){
