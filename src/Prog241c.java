@@ -16,18 +16,16 @@ public class Prog241c {
 
             int lcv = 0;
             while (input.hasNext()) {
-                    type.add(input.nextLine());
-                    gal.add(input.nextDouble()); //wrong
-                    wash.add(input.nextLine());
+                    type.add(input.next());
+                    gal.add(input.nextDouble());
+                    wash.add(input.next());
                     count.add(lcv);
-                    lcv++;
+
+                Prog214cCL wlw = new Prog214cCL(type.get(lcv), wash.get(lcv), gal.get(lcv)); //wrong
+                wlw.ticket();
+                lcv++;
+
             }
-
-
-         // for(int x : count){
-            Prog214cCL wlw = new Prog214cCL(type.get(0), wash.get(0), gal.get(0));  //wrong
-            wlw.ticket();                        //wrong
-            // }
 
 
             } catch(IOException e){

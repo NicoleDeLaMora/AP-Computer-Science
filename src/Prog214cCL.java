@@ -6,7 +6,7 @@
      private double gal;
      private double total;
 
-    public Prog214cCL(String typers, String washers, double gallons){
+    public Prog214cCL(String typers, String washers, Double gallons){
         type = typers;
         wash = washers;
         gal = gallons;
@@ -43,13 +43,13 @@
         System.out.print("COMPSCI PETROLEUM COMPANY\n");
         System.out.print("----------------------------\n");
         if (type.equals("P")) {
-            System.out.print("Premium \t\t" + gal + "gallons @ 1.479\n");
+            System.out.print("Premium \t" + gal + " gallons @ 1.479\n");
         } else if (type.equals("R")) {
-            System.out.print("Regular \t\t " + gal + "gallons @ 1.359\n");
-        } else System.out.print("High Octane \t\t " + gal + "gallons @ 1.429\n");
+            System.out.print("Regular \t " + gal + " gallons @ 1.359\n");
+        } else System.out.print("High Octane \t " + gal + " gallons @ 1.429\n");
         System.out.print("----------------------------\n");
-        System.out.print("Gasoline\t\t\t" + this.galCost + "\n");
-        System.out.print("Wash" + wash + "\t\t\t" + this.CalcWash() + "\n");
+        System.out.print("Gasoline\t\t\t" + this.CalcGas() + "\n");
+        System.out.print("Wash " + wash + "\t\t\t" + this.CalcWash() + "\n");
         System.out.print("\t\t\t\t___");
         System.out.println("Total Due: \t\t\t" + this.calcTOT());
         System.out.print("----------------------------\n");
