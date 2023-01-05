@@ -2,34 +2,37 @@ import java.io.*;
 import java.util.*;
 
 public class Prog464a {
-    public static void main(String[] args){
-        try {  // On Replit, may need to put "../data/prog285b.dat"
-            Scanner input = new Scanner(new File("data/prog285b.dat"));
+    public static void main(String[] args) {
+        try {
+            Scanner input = new Scanner(new File("data/prog464a.dat"));
 
-            //creating the arrays
-            int[][] mat = new int[5][6];  //5 arrays of 6
-            for(int row = 0; row < mat.length; row++){
-                for(int col = 0; col<mat[0].length-1; col++){
+            // 5 arrays of length 6
+            int[][] mat = new int[5][6];  // 5 rows, 6 columns
+            for (int row = 0; row < mat.length; row++) {
+                for (int col = 0; col < mat[0].length-1; col++) {
                     mat[row][col] = input.nextInt();
+                    // Read in a 5x5 matrix
                 }
             }
 
-            //find the biggest number in each row -- set the last collum to the number  (in every row)
-            for(int r = 0; r < mat.length; r++){
-                int rowBig = Integer.MIN_VALUE;
-                for(int c = 0; c < mat[0].length-1; c++){
-                    if(mat[r][c] > rowBig){
-                        rowBig = mat[r][c];
-                    }
+            // Find the biggest number in each row,
+            // then set the last column to that number
+            // for every single row
+            for (int r = 0; r < mat.length; r++) {
+                int rowbig = Integer.MIN_VALUE;
+                for (int c = 0; c < mat[0].length-1; c++) {
+                    if (mat[r][c] > rowbig)
+                        rowbig = mat[r][c];
                 }
-                mat[r][5] = rowBig;
+                mat[r][5] = rowbig;
             }
 
-            //print it
-            for(int[] row : mat){
-                for(int num : row){
-                    System.out.print(num + "  ");
+            // Print out the 2D array nicely
+            for (int[] row : mat) {
+                for (int num : row) {
+                    System.out.print(num + " ");
                 }
+                System.out.println();
             }
 
         } catch (IOException e) {
