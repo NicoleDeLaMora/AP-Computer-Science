@@ -42,3 +42,9 @@ public class Prog465c {
         }
     }
 }
+/*
+100 195 182 225
+83 125 235 67
+129 42 100 750
+The total of the edge is: 831 //wrong math // right list
+ */
