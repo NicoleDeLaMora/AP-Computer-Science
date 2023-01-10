@@ -26,7 +26,7 @@ public class Prog465c {
                 for(int co = 0; co < list.length; co++){
                     if(ro == 0){
                        count += list[ro][co];
-                    }else if(co == c-1){
+                    }else if(co == c - 1){
                         count += list[ro][co];
                     }else if(ro == r - 1){
                         count += list[ro][co];
