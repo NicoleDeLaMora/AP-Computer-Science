@@ -32,3 +32,4 @@ public class Prog470a {
         }
     }
 }
+//error with input ughhhhhh
