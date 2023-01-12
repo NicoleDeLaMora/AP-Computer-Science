@@ -11,7 +11,7 @@ public class Prog465c {
             int c = input.nextInt();
             int[][] list = new int[r][c];
             for(int row = 0; row < list.length; row++){
-                for(int col = 0; col < list.length+1; col++){
+                for(int col = 0; col < list[0].length; col++){
                     list[row][col] = input.nextInt();
                 }
             }
@@ -23,15 +23,19 @@ public class Prog465c {
             }
             int count = 0;
             for(int ro = 0; ro < list.length; ro++){
-                for(int co = 0; co < list.length; co++){
+                for(int co = 0; co < list[0].length; co++){
                     if(ro == 0){
-                       count += list[ro][co];
+
+                        count += list[ro][co];
                     }else if(co == c - 1){
                         count += list[ro][co];
+
                     }else if(ro == r - 1){
                         count += list[ro][co];
+
                     }else if(co == 0){
                         count+= list[ro][co];
+
                     }
                 }
             }
@@ -46,5 +50,5 @@ public class Prog465c {
 100 195 182 225
 83 125 235 67
 129 42 100 750
-The total of the edge is: 831 //wrong math // right list
+The total of the edge is: 1873
  */
