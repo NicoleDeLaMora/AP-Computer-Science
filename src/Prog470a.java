@@ -17,7 +17,7 @@ public class Prog470a {
                 for(int r = 0; r < list[0].length; r++){
                     colCount+= list[r][c];
                 }
-                list[4][c] = colCount;
+                list[5][c] = colCount;
             }
 
             for (int[] row : list) {
@@ -32,4 +32,11 @@ public class Prog470a {
         }
     }
 }
-//error with input ughhhhhh
+/*
+45	67	89	12	-3
+-3	-6	-7	-4	-9
+96	81	-8	52	12
+14	-7	72	29	-1
+19	43	28	63	87
+171	178	174	152	86
+ */
