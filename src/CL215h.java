@@ -13,14 +13,17 @@ public class CL215h {
         min = list.get(0);
         max = list.get(0);
         double tot = 0;
-        for(int i = 0; i < list.size(); i++){
-            if(list.get(i) > max){
-                max = list.get(i);
-            }else if(list.get(i) < min){
-                min = list.get(i);
+
+        for(double lcv : list){
+            if(lcv > max){
+                max = lcv;
             }
-             tot += list.get(i);
+            if(lcv < min){
+                min = lcv;
+            }
+            tot+= lcv;
         }
+        System.out.println(min + " " + max);
         ave = (tot - min - max) / list.size();
         return ave;
     }
@@ -28,7 +31,7 @@ public class CL215h {
         for(int l = 0; l < list.size(); l++)
         System.out.print(list.get(l) + " ");
 
-        System.out.println(" = " + ave);
+        System.out.printf(" = %5.2f\n", ave);
 
     }
 }

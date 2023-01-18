@@ -14,11 +14,13 @@ public class Prog215h {
                 all.add(input.nextDouble());
             }
             for(int lcv = 0; lcv < all.size(); lcv++){
-                if(lcv < 9){
+                if(lcv <= 7){
                     c1.add(all.get(lcv));
-                }else if(lcv > 8 && lcv < 17){
+                }else if (lcv > 8 && lcv < 16){
                     c2.add(all.get(lcv));
-                }else c3.add(all.get(lcv));
+                }else if (lcv > 17 && lcv < 24){
+                    c3.add(all.get(lcv));
+                }
             }
 
             CL215h qow = new CL215h(c1);
