@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Prog241c {
+public class Prog214c {
     public static void main(String[] args) {
 
         try {  // On Replit, may need to put "../data/prog285b.dat"
