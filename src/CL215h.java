@@ -23,8 +23,7 @@ public class CL215h {
             }
             tot+= lcv;
         }
-        System.out.println(min + " " + max);
-        ave = (tot - min - max) / list.size();
+        ave = (tot - (min + max)) / (list.size()-2);
         return ave;
     }
     public void WriteIt(){
@@ -35,3 +34,11 @@ public class CL215h {
 
     }
 }
+/*
+8.4 9.1 8.5 8.4 9.1 8.7 8.8 9.1  =  8.77
+7.0 7.0 7.0 7.0 7.0 7.0 7.0 7.0  =  7.00
+8.0 7.9 8.0 8.0 8.0 8.0 8.0 8.1  =  8.00
+
+Process finished with exit code 0
+
+ */

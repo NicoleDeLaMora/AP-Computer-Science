@@ -16,9 +16,9 @@ public class Prog215h {
             for(int lcv = 0; lcv < all.size(); lcv++){
                 if(lcv <= 7){
                     c1.add(all.get(lcv));
-                }else if (lcv > 8 && lcv < 16){
+                }else if (lcv > 7 && lcv < 16){
                     c2.add(all.get(lcv));
-                }else if (lcv > 17 && lcv < 24){
+                }else if (lcv > 15 && lcv < 24){
                     c3.add(all.get(lcv));
                 }
             }
