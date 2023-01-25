@@ -7,7 +7,7 @@ import java.util.*;
 public class Prog701g {
     public static void main(String[] args) {
         try {  // On Replit, may need to put "../data/prog285b.dat"
-            Scanner input = new Scanner(new File("data/prog285b.dat"));
+            Scanner input = new Scanner(new File("data/prog701g.dat"));
             List<Person> list = new ArrayList<Person>();
 
             int num = input.nextInt();
@@ -55,7 +55,11 @@ public class Prog701g {
                 }
             }
 
-            System.out.println("Average GPA: " + String.format("%2.f", ))
+            System.out.println("Average Student GPA: " + String.format("%.2f",(tot/cnt)));
+            System.out.println("Total number of students taught by teachers: " + totstu);
+            System.out.println("Smallest Favorite Admin Word: " + small);
+            System.out.println("Largest Favorite Admin Word: " + large);
+
         } catch (
                 IOException e) {
             System.out.println("Can't find data file!");
@@ -63,3 +67,11 @@ public class Prog701g {
     }
 
 }
+/*
+Average Student GPA: 3.06
+Total number of students taught by teachers: 316
+Smallest Favorite Admin Word: done
+Largest Favorite Admin Word: coolbeans
+
+Process finished with exit code 0
+ */
