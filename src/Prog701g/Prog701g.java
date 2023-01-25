@@ -11,18 +11,18 @@ public class Prog701g {
             List<Person> list = new ArrayList<Person>();
 
             int num = input.nextInt();
-            while(num != 99){
+            while (num != 99) {
                 String f = input.next();
                 String l = input.next();
-                if(num == 1){
+                if (num == 1) {
                     double g = input.nextDouble();
                     Person p = new Student(f, l, g);
                     list.add(p);
-                }else if(num == 2){
-                   int n = input.nextInt();
-                   Person p = new Teacher(f, l, n);
-                   list.add(p);
-                }else if(num==3){
+                } else if (num == 2) {
+                    int n = input.nextInt();
+                    Person p = new Teacher(f, l, n);
+                    list.add(p);
+                } else if (num == 3) {
                     String fav = input.next();
                     Person p = new Admin(f, l, fav);
                     list.add(p);
@@ -36,26 +36,26 @@ public class Prog701g {
             String large = "";
             String small = "askjhdflkjhsagdohagrheoihgsgrowiehwebothhavedreamstomaketrue.ourfuturesallplaned.itstimetogetserious.timetogetseriouswith-seriousldskflksjdftakeoutjourney.serious-yourtzalkingtoafuruteatouney";
 
-            for(Person x : list){
-                if(x instanceof Student){
-                    tot+= ((Student)x).getGPA();
+            for (Person x : list) {
+                if (x instanceof Student) {  //basically == but for types
+                    tot += ((Student) x).getGPA(); //casted as a student
                     cnt++;
                 }
-                if(x instanceof  Teacher){
-                    totstu+= ((Teacher)x).getNumStuds();
+                if (x instanceof Teacher) {
+                    totstu += ((Teacher) x).getNumStuds();
                 }
-                if(x instanceof Admin){
-                    String xstring = ((Admin)x).getFavString();
+                if (x instanceof Admin) {
+                    String xstring = ((Admin) x).getFavString();
 
-                    if(xstring.length() < small.length()){
+                    if (xstring.length() < small.length()) {
                         small = xstring;
                     }
-                    if(xstring.length() > large.length())
+                    if (xstring.length() > large.length())
                         large = xstring;
                 }
             }
 
-            System.out.println("Average Student GPA: " + String.format("%.2f",(tot/cnt)));
+            System.out.println("Average Student GPA: " + String.format("%.2f", (tot / cnt)));
             System.out.println("Total number of students taught by teachers: " + totstu);
             System.out.println("Smallest Favorite Admin Word: " + small);
             System.out.println("Largest Favorite Admin Word: " + large);
@@ -65,9 +65,8 @@ public class Prog701g {
             System.out.println("Can't find data file!");
         }
     }
-
 }
-/*
+        /*
 Average Student GPA: 3.06
 Total number of students taught by teachers: 316
 Smallest Favorite Admin Word: done
