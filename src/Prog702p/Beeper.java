@@ -13,8 +13,8 @@ public class Beeper extends Animal{
       words = list;
       for(int lcv = 0; lcv < words.size(); lcv++){
         for(String x : words){
-        if(x.substring(lcv, lcv+1).equals('a'))
-              
+        //if(x.substring(lcv, lcv+1).equals("a"))
+              int i = 1;
        
         }
       }
