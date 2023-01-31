@@ -13,7 +13,7 @@ public class LoopTest {
 
         //for loop does all the lcv sh-- in one line
         for (int lcv2 = 1;lcv2 <= 10; lcv2++){
-            System.out.print(lcv2 + "  ");
+            System.out.print(lcv2)
         }
         System.out.println();
     }

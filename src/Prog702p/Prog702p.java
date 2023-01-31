@@ -29,7 +29,7 @@ public class Prog702p {
                     double fur = input.nextDouble();
                     Animal p = new Hicca(name, word, fur);
                     System.out.println("Hicca's name is: " + name + " " + word);
-                    System.out.println("Its fur is worth: " + fur);
+                    System.out.println("Its fur is worth: $" + fur);
                     furSum += fur;
                     totH++;
 
@@ -37,7 +37,7 @@ public class Prog702p {
                     int step = input.nextInt();
                     Animal p = new Walleye(name, word, step);
                     System.out.println("Wallie's name is: " + name + " " + word);
-                    System.out.println("Wallie has taken: " + step);
+                    System.out.println("Wallie has taken: " + step + " steps");
                     totStep += step;
                     totW++;
 
@@ -55,9 +55,13 @@ public class Prog702p {
 
             double wordSize = (double)length / totB;
             double StepAve = (double)totStep / totW;
-            double Furave = 0;
+            double Furave = (double)furSum / totH;
 
+            System.out.println("The average value of the Hicca fur is: " + Furave);
+            System.out.println("The average number of steps taken by the Wallies is:  " + StepAve);
+            System.out.println("The average size of the Beepers words is:  " + wordSize);
 
+          
 
 
 
