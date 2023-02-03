@@ -26,7 +26,7 @@ public class Prog702q {
                     list.add(t);
                 } else if (num == 3) {
                     String City = input.next();
-                    Vehicle b = new Busses(name, tires, City);
+                    Vehicle b = new Bus(name, tires, City);
                     list.add(b);
                 }
                 num = input.nextInt();
@@ -49,13 +49,20 @@ public class Prog702q {
                 }else if(x instanceof Truck){
                     double tValue = 50000 - (0.25 * ((Truck)x).myMiles());
                     totWorth+= tValue;
-                    if(tValue < leastValue){
+                    if(tValue < leastValue)
                         leastValue = tValue;
-                    }
-                }
+                    TTires += Integer.parseInt(((Truck)x).getTire());
+                    
+                }else if(x instanceof Bus){
+                    totWorth += 50000;
+                    if(longName.length() > ((Bus)x).getMyCity().length())
+                      longName = ((Bus)x).getMyCity();
+                    BTires += Integer.parseInt(((Bus)x).getTire());
+            }
             }
 
 
+            System.out.println("Amount of Vehicles: " + String.format("%.2f", (tot / cnt)));
 
         } catch (IOException e) {
             System.out.println("Can't find data file!");

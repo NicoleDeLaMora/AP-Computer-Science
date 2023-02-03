@@ -9,7 +9,7 @@ public class Beeper extends Animal{
         extraWord = xWord;
     }
 
-    public void CommonLetter(ArrayList<String> list){
+ /*   public void CommonLetter(ArrayList<String> list){
       words = list;
       for(int lcv = 0; lcv < words.size(); lcv++){
         for(String x : words){
@@ -21,7 +21,7 @@ public class Beeper extends Animal{
           
     }
 
-
+*/
   
     public String getExtraWord(){return extraWord;}
 }

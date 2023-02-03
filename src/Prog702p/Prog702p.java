@@ -10,7 +10,7 @@ public class Prog702p {
     public static void main(String[] args) {
         try {  // On Replit, may need to put "../data/prog285b.dat"
             Scanner input = new Scanner(new File("data/prog701g.dat"));
-            List<Animal> list = new ArrayList<Animal>();
+       //     List<Animal> list = new ArrayList<Animal>();
 
             int num = input.nextInt();
 
