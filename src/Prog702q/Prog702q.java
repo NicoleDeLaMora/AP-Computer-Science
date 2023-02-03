@@ -45,24 +45,25 @@ public class Prog702q {
             for(Vehicle x : list){
                 if(x instanceof Car){
                     totWorth += ((Car) x).carWorth();
-                    CTires += Integer.parseInt(((Car)x).getTire());
+                    CTires += Integer.parseInt((x).getTire());
                 }else if(x instanceof Truck){
                     double tValue = 50000 - (0.25 * ((Truck)x).myMiles());
                     totWorth+= tValue;
                     if(tValue < leastValue)
                         leastValue = tValue;
-                    TTires += Integer.parseInt(((Truck)x).getTire());
+                    TTires += Integer.parseInt((x).getTire());
                     
                 }else if(x instanceof Bus){
                     totWorth += 50000;
                     if(longName.length() > ((Bus)x).getMyCity().length())
                       longName = ((Bus)x).getMyCity();
-                    BTires += Integer.parseInt(((Bus)x).getTire());
+                    BTires += Integer.parseInt((x).getTire());
             }
             }
 
 
-            System.out.println("Amount of Vehicles: " + String.format("%.2f", (tot / cnt)));
+           // System.out.println("GPA: " + String.format("%.2f", (tot / cnt)));
+
 
         } catch (IOException e) {
             System.out.println("Can't find data file!");
