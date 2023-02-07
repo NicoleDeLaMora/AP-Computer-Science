@@ -36,7 +36,7 @@ public class Prog875s {
             line = in2.nextLine();
 
             while(in2.hasNext()){
-                dnaChip = line;
+                dnaChip += line;
                 line = in2.nextLine();
             }
 
@@ -46,7 +46,7 @@ public class Prog875s {
             line = in3.nextLine();
 
             while(in3.hasNext()){
-                dnaMouse = line;
+                dnaMouse += line;
                 line = in3.nextLine();
             }
 
