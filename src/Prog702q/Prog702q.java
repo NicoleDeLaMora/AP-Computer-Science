@@ -55,7 +55,7 @@ public class Prog702q {
                     
                 }else if(x instanceof Bus){
                     totWorth += 50000;
-                    if(longName.length() > ((Bus)x).getMyCity().length())
+                    if(longName.length() < ((Bus)x).getMyCity().length())
                       longName = ((Bus)x).getMyCity();
                     BTires += Integer.parseInt((x).getTire());
             }
@@ -63,7 +63,12 @@ public class Prog702q {
 
 
            // System.out.println("GPA: " + String.format("%.2f", (tot / cnt)));
-
+                System.out.println("Total Number of Vehicles: " + totVehicles);
+                System.out.println("Total Worth of Vehicles: " + totWorth);
+                System.out.println("Longest City Name: " + longName);
+                System.out.println("Truck with Least Value: " + leastValue);
+                System.out.println("Total Number of Tires: ");
+                System.out.println("Car: " + )
 
         } catch (IOException e) {
             System.out.println("Can't find data file!");
