@@ -29,7 +29,7 @@ public class Prog702q {
                     Vehicle b = new Bus(name, tires, City);
                     list.add(b);
                 }
-                num = input.nextInt();
+                num = Integer.parseInt(input.next());
             }
 
 
@@ -68,7 +68,9 @@ public class Prog702q {
                 System.out.println("Longest City Name: " + longName);
                 System.out.println("Truck with Least Value: " + leastValue);
                 System.out.println("Total Number of Tires: ");
-                System.out.println("Car: " + )
+                System.out.println("Car: " + CTires);
+                System.out.println("Truck: " + TTires);
+                System.out.println("Bus: " + BTires);
 
         } catch (IOException e) {
             System.out.println("Can't find data file!");
