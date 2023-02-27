@@ -50,8 +50,66 @@ public class Prog505w {
             }
 
             //... (you do this (ugh))
+/*
+The program should report the income of the day and the cumulative weight of all animals.
+The program should then determine if there is enough food to feed all the animals.    check
+ The program should report the cow location that makes the most money.                check
+  The program should report the horse location that makes the least money.            check
+
+A pound of milk sells for $0.20.
+
+ */
+            //money money money
+            /*
+             The amount of money a cow makes is the money made for milk minus the cost of the feed for that animal for that day.
+             The amount of money a horse makes is the money generated from giving rides minus the cost of the feed for that animal for that day.
+             A pound of milk sells for $0.20.
+             */
+            double totalEarnings = 0;
+            for(int lcv = 0; lcv < animals.size(); lcv++){
+                totalEarnings += animals.get(lcv).value(cornCost, hayCOst);
+            }
+            System.out.println("The total earnings for this day is: $" + totalEarnings + ".");
+
+            //weight
+            int totWight = 0;
+            for(int lcv = 0; lcv < animals.size(); lcv++){
+                totWight += animals.get(lcv).getWeight();
+            }
+            System.out.println("The total weight of the animals is: " + totWight + " pounds.");
 
 
+            //enough food???
+            int totCornMunch = 0;
+            int totHayMunch = 0;
+
+            //hay = ammount of hay;      corn = amount of corn
+            for(int lcv = 0; lcv < animals.size(); lcv++){
+                totCornMunch += animals.get(lcv).getNumCorn();
+                totHayMunch += animals.get(lcv).getNumHay();
+            }
+            if(corn-totCornMunch < 0 && hay-totHayMunch < 0){
+                System.out.println("There is not enough corn or hay for the animals.");
+            } else if(corn - totCornMunch < 0){
+                System.out.println("There is not enough corn to feed all animals.");
+            }else if(hay-totHayMunch < 0){
+                System.out.println("There is not enough hay to feed all animals.");
+            }else System.out.println("There is enough food for all animals.");
+
+
+            //money making cow :)
+            double maxCow = 0;
+            int maxCowIndex = 0;
+            for(int lcv = 0; lcv < animals.size(); lcv++){
+               if(animals.get(lcv) instanceof Cow){
+                  Cow cow = (Cow)animals.get(lcv);
+                  if(cow.value(cornCost, hayCOst) > maxCow){
+                      maxCow = cow.value(cornCost, hayCOst);
+                      maxCowIndex = lcv;
+                  }
+               }
+            }
+            System.out.printf("Cow %s makes the most money.\n", animals.get(maxCowIndex).getName());
 
 
             //least earning horse
@@ -67,8 +125,7 @@ public class Prog505w {
                 }
 
             }
-
-            System.out.printf("Horse %s makes the least money\n", animals.get(minHorseIndex).getName());
+            System.out.printf("Horse %s makes the least money.\n", animals.get(minHorseIndex).getName());
 
 
 
@@ -79,3 +136,10 @@ public class Prog505w {
         }
     }
 }
+/*
+The total earnings for this day is: $190.0.
+The total weight of the animals is: 32790 pounds.
+There is enough food for all animals.
+Cow Barb makes the most money.
+Horse JohnJohn makes the least money.
+ */
