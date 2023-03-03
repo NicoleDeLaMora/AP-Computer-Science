@@ -10,7 +10,9 @@ public class Prog505t {
     public static void main(String[] args) {
         try {  // On Replit, may need to put "../data/prog285b.dat"
             Scanner input = new Scanner(new File("data/prog505w.dat"));
-            List<Animal> animals = new ArrayList<Animal>();
+            List<Horse> Horses = new ArrayList<Horse>();
+            List<Cow> Cows = new ArrayList<Cow>();
+
 
             int hay = input.nextInt();
             double hayCOst = input.nextDouble();
@@ -28,7 +30,7 @@ public class Prog505t {
                     int hayMunch = input.nextInt();
                     int cornMunch = input.nextInt();
                     Cow wow = new Cow(name, wight, milk, hayMunch, cornMunch);
-                    animals.add(wow);
+                    Cows.add(wow);
                     hay -= hayMunch;
                     corn -= cornMunch;
                 }
@@ -46,7 +48,7 @@ public class Prog505t {
                     int rides = input.nextInt();
                     double ridesCost = input.nextDouble();
                     Horse fred = new Horse(name, wight, rides, hayMunch, cornMunch, ridesCost);
-                    animals.add(fred);
+                    Horses.add(fred);
                     hay -= hayMunch;
                     corn -= cornMunch;
                 }
