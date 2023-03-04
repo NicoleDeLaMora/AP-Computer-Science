@@ -60,6 +60,9 @@ It should determine if there is enough food to feed all the animals, if so, feed
 o   Sell off the 3 cows that generate the lowest amount of milk.           check
 o   Sell off the 2 horses that generate the lowest amount of ride income.  check
 
+o   Change the first cow.   The cow has a weight of 1250, followed by 80 pounds of milk produced per day, followed by the number of 3 hay bales eaten each day, followed by 4 corncobs eaten each day.
+o   Report the total number of cows and horses on the farm.
+
             */
           
           //report income
@@ -115,7 +118,17 @@ o   Sell off the 2 horses that generate the lowest amount of ride income.  check
               } 
               Horses.remove(leastIndex);
             }
+        /*
+          o   Change the first cow.   The cow has a weight of 1250, followed by 80 pounds of milk produced per day,                       followed by the number of 3 hay bales eaten each day, followed by 4 corncobs eaten each day.
+          o   Report the total number of cows and horses on the farm.
+        */
 
+          //first cow sitch
+          Cows.set(0, new Cow ("patricia", 1250, 80, 3, 4));
+          //Total number horses + cows
+          System.out.println("Total number of cows: " + Cows.size());
+          System.out.println("Total number of horses: " + Horses.size());
+          
 
 
 
