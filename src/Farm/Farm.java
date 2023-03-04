@@ -7,10 +7,9 @@ public class Farm implements IFarm{
     private int myNumCorn;
     private double myHayCost;
     private double myCornCost;
-    private int myCornEaten;
-    private int myHayEaten;
+    
 
-    public Farm(ArrayList<Horse> horsies, ArrayList<Cow> cowwows, int numHay, int numCown, double hayCost, double cornCost, int hayMunch, int cornMunch){
+    public Farm(ArrayList<Horse> horsies, ArrayList<Cow> cowwows, int numHay, int numCown, double hayCost, double cornCost){
         myHorses = horsies;
         myCows = cowwows;
         myNumHayBales = numHay;
@@ -112,11 +111,19 @@ public class Farm implements IFarm{
         for(int lcv = 0; lcv < myCows.size(); lcv++){
             aminalCost+= myCows.get(lcv).getFeedCost(myHayCost, myCornCost);
         }
+      for(int lcv = 0; lcv < myHorses.size(); lcv++){
+            aminalCost+= myHorses.get(lcv).getFeedCost(myHayCost, myCornCost);
+        }
+      return aminalCost;
     }
 
     /** Returns the cows in an ArrayList */
-    public ArrayList<Cow> getCows();
+    public ArrayList<Cow> getCows(){
+      return myCows;
+    }
 
     /** Returns the horses in an ArrayList */
-    public ArrayList<Horse> getHorses();
+    public ArrayList<Horse> getHorses(){
+      return myHorses;
+    }
 }
