@@ -12,7 +12,9 @@ public class Prog901a {
     }
 
     public static String reverseString(String s){
-
+        if (s.isEmpty()) // if its good
+            return s;
+        return reverseString(s.substring(1)) + s.substring(0,1); //recussion call
     }
 
     public static void main(String[] args){
