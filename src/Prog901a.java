@@ -4,6 +4,7 @@ import java.util.*;
 public class Prog901a {
     public static void printFile(Scanner input){
         String str = input.next();
+        System.out.println("Original String: ");
         System.out.println(str);
         String back = reverseString(str);
         System.out.println("Backwards:");
@@ -19,10 +20,16 @@ public class Prog901a {
 
     public static void main(String[] args){
         try {  // On Replit, may need to put "../data/prog285b.dat"
-            Scanner input = new Scanner(new File("data/prog285b.dat"));
+            Scanner input = new Scanner(new File("data/prog512h.dat"));
             printFile(input);
         } catch (IOException e) {
             System.out.println("Can't find data file!");
         }
     }
 }
+/*
+Original String:
+Good
+Backwards:
+dooG
+ */

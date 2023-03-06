@@ -9,10 +9,10 @@ public class Prog702q {
     public static void main(String[] args) {
         try {  // On Replit, may need to put "../data/prog285b.dat"
             Scanner input = new Scanner(new File("data/prog702q.txt"));
-                List<Vehicle> list = new ArrayList<Vehicle>() ;
+            List<Vehicle> list = new ArrayList<Vehicle>();
 
 
-                int num = input.nextInt();
+            int num = input.nextInt();
             while (num != 99) {
                 String name = input.next();
                 String tires = input.next();
@@ -42,34 +42,34 @@ public class Prog702q {
             int TTires = 0;
             int BTires = 0;
 
-            for(Vehicle x : list){
-                if(x instanceof Car){
+            for (Vehicle x : list) {
+                if (x instanceof Car) {
                     totWorth += ((Car) x).carWorth();
                     CTires += Integer.parseInt((x).getTire());
-                }else if(x instanceof Truck){
-                    double tValue = 50000 - (0.25 * ((Truck)x).myMiles());
-                    totWorth+= tValue;
-                    if(tValue < leastValue)
+                } else if (x instanceof Truck) {
+                    double tValue = 50000 - (0.25 * ((Truck) x).myMiles());
+                    totWorth += tValue;
+                    if (tValue < leastValue)
                         leastValue = tValue;
                     TTires += Integer.parseInt((x).getTire());
-                    
-                }else if(x instanceof Bus){
+
+                } else if (x instanceof Bus) {
                     totWorth += 50000;
-                    if(longName.length() > ((Bus)x).getMyCity().length())
-                      longName = ((Bus)x).getMyCity();
+                    if (longName.length() > ((Bus) x).getMyCity().length())
+                        longName = ((Bus) x).getMyCity();
                     BTires += Integer.parseInt((x).getTire());
-            }
+                }
             }
 
 
-           // System.out.println("GPA: " + String.format("%.2f", (tot / cnt)));
+            // System.out.println("GPA: " + String.format("%.2f", (tot / cnt)));
             System.out.println("There are " + totVehicles + " vehicles total");
             System.out.println("All of the cars are worth: " + totWorth);
-          System.out.println("Longest home destination name: " + longName);
-          System.out.println(leastValue + )
+            System.out.println("Longest home destination name: " + longName);
+            //System.out.println(leastValue + );
 
-        } catotWorthotWorthch (IOException e) {
-            System.out.println("Can't find data file!");
-        }
+        } catch (IOException e) {
+        System.out.println("Can't find data file!");
+    }
     }
 }
