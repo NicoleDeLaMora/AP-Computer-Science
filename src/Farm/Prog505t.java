@@ -18,7 +18,7 @@ public class Prog505t {
 
             int cowRows = input.nextInt();
 
-            for (int r = 0; r <= cowRows; r++) {
+            for (int r = 0; r < cowRows; r++) {
 
                     int wight = input.nextInt();
                     int milk = input.nextInt();
@@ -32,7 +32,7 @@ public class Prog505t {
 
             int horseRows = input.nextInt();
 
-            for (int r = 0; r <= horseRows; r++) {
+            for (int r = 0; r < horseRows; r++) {
 
                     int wight = input.nextInt();
                     int hayMunch = input.nextInt();
@@ -60,10 +60,10 @@ o   Report the total number of cows and horses on the farm.
             */
           
           //report income
-          System.out.println("Income of the day: " + farm.farmIncome());
+          System.out.println("Income of the day: $" + farm.farmIncome());
           
           //report cost of feeding all animals
-          System.out.println("Cost of feeding animals: " + farm.getCost());
+          System.out.println("Cost of feeding animals: $" + farm.getCost());
           
           //Wight of all animals
           System.out.println("Weight of all animals: " + farm.getWeight());
@@ -82,7 +82,7 @@ o   Report the total number of cows and horses on the farm.
               eatHay += Horses.get(lcv).getNumHay();
               eatCOrn += Horses.get(lcv).getNumCorn();
             }
-          if(farm.feedAllAnimals() == true){
+          if(farm.feedAllAnimals()){
             System.out.println("Number of hay bales left over: " + (hay - eatHay));   
             System.out.println("Number of corn cobs left over: " + (corn - eatCOrn));
 
@@ -132,3 +132,16 @@ o   Report the total number of cows and horses on the farm.
     }
     }
 }
+/*
+C:\Users\delamora.n\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=57635:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\delamora.n\Desktop\AP Computer Science\out\production\AP Computer Science" Farm.Prog505t
+Income of the day: $251.0
+Cost of feeding animals: $180.5
+Weight of all animals: 42835
+Number of hay bales left over: 859
+Number of corn cobs left over: 2359
+Total number of cows: 12
+Total number of horses: 6
+
+Process finished with exit code 0
+
+ */
