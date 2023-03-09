@@ -31,5 +31,4 @@ Multiple: 3
 Starting Number: 3
 Ending Number: 9669
 The sum of the multiples of 3, from 3 to 9669 is 15586428.
-
  */
