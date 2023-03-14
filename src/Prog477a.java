@@ -38,7 +38,7 @@ public class Prog477a {
                 }
 
             }
-            }
+
 
             for(int row = 0; row < list.length; row++){
                 for(int col = 0; col < list[0].length; col++){
@@ -47,13 +47,26 @@ public class Prog477a {
 
                 }
             }
-
+                int maleTOTAL = 0;
+                int femaleTOTAL = 0;
+                int totalTOTAL = 0;
+                for(int r = 0; r < list.length; r++){
+                    for(int c = 0; c < list[0].length; c++){
+                        if(c==0){
+                            maleTOTAL+= list[r][c];
+                        }else if(c==1){
+                            femaleTOTAL+= list[r][c];
+                        }else totalTOTAL+= list[r][c];
+                    }
+                }
             System.out.print("Grade\tMale\tFemale\tTotal\n");
-            System.out.println("A\t" + list[0][0] + "\t" + list[0][1] + "\t" + list[0][2]);
-            System.out.println("B\t" + list[1][0] + "\t" + list[1][1] + "\t" + list[1][2]);
-            System.out.println("C\t" + list[2][0] + "\t" + list[2][1] + "\t" + list[2][2]);
-            System.out.println("D\t" + list[3][0] + "\t" + list[3][1] + "\t" + list[3][2]);
-            System.out.println("F\t" + list[4][0] + "\t" + list[4][1] + "\t" + list[4][2]);
+            System.out.println("A\t\t" + list[0][0] + "\t\t" + list[0][1] + "\t\t" + list[0][2]);
+            System.out.println("B\t\t" + list[1][0] + "\t\t" + list[1][1] + "\t\t" + list[1][2]);
+            System.out.println("C\t\t" + list[2][0] + "\t\t" + list[2][1] + "\t\t" + list[2][2]);
+            System.out.println("D\t\t" + list[3][0] + "\t\t" + list[3][1] + "\t\t" + list[3][2]);
+            System.out.println("F\t\t" + list[4][0] + "\t\t" + list[4][1] + "\t\t" + list[4][2]);
+            System.out.println("--------------------------------------------------------------------");
+            System.out.println("Totals:\t" + maleTOTAL + "\t\t" + femaleTOTAL + "\t\t" + totalTOTAL);
 //int row = grade
             //int col = gender (?)
             //list[row][col] ++
