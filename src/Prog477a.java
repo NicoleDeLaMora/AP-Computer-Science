@@ -30,9 +30,9 @@ public class Prog477a {
                         list[1][1]++;
                     else if (num == 3)
                         list[2][1]++;
-                    else if (input.nextInt() == 4)
+                    else if (num == 4)
                         list[3][1]++;
-                    else if (input.nextInt() == 5)
+                    else if (num == 5)
                         list[4][1]++;
 
                 }
@@ -83,3 +83,17 @@ public class Prog477a {
         }
     }
 }
+/*
+C:\Users\delamora.n\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=61098:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\delamora.n\Desktop\AP Computer Science\out\production\AP Computer Science" Prog477a
+Grade	Male	Female	Total
+A		2		4		6
+B		4		4		8
+C		4		7		11
+D		2		3		5
+F		3		0		3
+--------------------------------------------------------------------
+Totals:	15		18		33
+
+Process finished with exit code 0
+
+ */
