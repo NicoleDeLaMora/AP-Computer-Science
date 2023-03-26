@@ -1,12 +1,12 @@
 package Prog703s;
 
 public class Window extends Computer{
-  private int myVersion;
+  private double myVersion;
 
-  public Window(String name, int num, double val, int vers){
+  public Window(String name, int num, double val, double vers){
     super(name, num, val);
     myVersion = vers;
   }
 
-  public int getVersion(){return myVersion;}
+  public double getVersion(){return myVersion;}
 }

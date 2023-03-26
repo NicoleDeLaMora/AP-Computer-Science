@@ -23,23 +23,48 @@ public class Prog703s{
                 String name = input.next();
                 int num = input.nextInt();
                 double value = input.nextDouble();
-                int version = input.nextInt();
-                Computer w = new Apple(name, num, value, version);
+                double version = input.nextDouble();
+                Computer w = new Window(name, num, value, version);
                 list.add(w);
               }else{
                 //linux
                 String name = input.next();
                 int num = input.nextInt();
                 double value = input.nextDouble();
-                double code = input.nextDouble();
-                Computer l = new Apple(name, num, value, code);
+                int code = input.nextInt();
+                Computer l = new Linux(name, num, value, code);
                 list.add(l);
               }
             }
+            
+            //find out how many gold/greeen (capitol g)
+            int GorG = 0;
+            int SevenSevenSeven = 0;
+            int Fivers = 0;
+            for(Computer c : list){
+              if(c instanceof Apple){
+                if(c.getColor().equals("Gold") || c.getColor().equals("Green"))
+                  GorG++;
+              }
+              if(c instanceof Window){
+                if(c.getVersion() == 7.0){
+                  SevenSevenSeven++;
+                }
+              }
+              if(c instanceof Linux){
+                if(c.getCode() % 5 == 0 && c.getCode() % 10 != 0){
+                  Fivers++;
+                }
+              }
+              
+              
+              
+            }
 
-
-
-      
+            
+            System.out.println("There are " + GorG + " Apple computers colored Green or Gold.");
+            System.out.println("There are " + SevenSevenSeven + " Window computers with version 7.0.");
+            System.out.println("There are " + Fivers + " Linux computers with codes ending with 5.");
             
     } catch (IOException e) {
             System.out.println("Can't find data file!");
