@@ -43,16 +43,16 @@ public class Prog703s{
             int Fivers = 0;
             for(Computer c : list){
               if(c instanceof Apple){
-                if(c.getColor().equals("Gold") || c.getColor().equals("Green"))
+                if(((Apple)c).getColor().equals("Gold") || ((Apple)c).getColor().equals("Green"))
                   GorG++;
               }
               if(c instanceof Window){
-                if(c.getVersion() == 7.0){
+                if(((Window)c).getVersion() == 7.0){
                   SevenSevenSeven++;
                 }
               }
               if(c instanceof Linux){
-                if(c.getCode() % 5 == 0 && c.getCode() % 10 != 0){
+                if(((Linux)c).getCode() % 5 == 0 && ((Linux)c).getCode() % 10 != 0){
                   Fivers++;
                 }
               }

@@ -54,27 +54,27 @@ public class Prog607a {
   }
 
   public static String encodeMonth(String month){
-    if(month.equals(01)){
+    if(month.equals("01")){
       return "A";
-    }else if(month.equals(02)){
+    }else if(month.equals("02")){
       return "B";
-    }else if(month.equals(03)){
+    }else if(month.equals("03")){
       return "C";
-    }else if(month.equals(04)){
+    }else if(month.equals("04")){
       return "D";
-    }else if(month.equals(05)){
+    }else if(month.equals("05")){
       return "E";
-    }else if(month.equals(06)){
+    }else if(month.equals("06")){
       return "F";
-    }else if(month.equals(07)){
+    }else if(month.equals("07")){
       return "G";
-    }else if(month.equals(08)){
+    }else if(month.equals("08")){
       return "H";
-    }else if(month.equals(09)){
+    }else if(month.equals("09")){
       return "I";
-    }else if(month.equals(10)){
+    }else if(month.equals("10")){
       return "J";
-    }else if(month.equals(11)){
+    }else if(month.equals("11")){
       return "K";
     }else return "L"; //euals 12
   }
@@ -84,30 +84,30 @@ public class Prog607a {
     String second = date.substring(1);
     String answer = "";
     
-    if(first.equals(1))
+    if(first.equals("1"))
       answer+= "Q"; //qrstuvwxyz
-    else if(first.equals(2))
+    else if(first.equals("2"))
       answer += "R";
-    else if(first.equals(3))
+    else if(first.equals("3"))
       answer += "S";
     
-    if(second.equals(0)){
+    if(second.equals("0")){
       answer += "Z";
-    }else if(second.equals(1)){
+    }else if(second.equals("1")){
       answer += "Q";
-    }else if(second.equals(2)){
+    }else if(second.equals("2")){
       answer += "R";
-    }else if(second.equals(3)){
+    }else if(second.equals("3")){
       answer += "S";
-    }else if(second.equals(4)){
+    }else if(second.equals("4")){
       answer += "T";
-    }else if(second.equals(5)){
+    }else if(second.equals("5")){
       answer += "U";
-    }else if(second.equals(6)){
+    }else if(second.equals("6")){
       answer += "V";
-    }else if(second.equals(7)){
+    }else if(second.equals("7")){
       answer += "W";
-    }else if(second.equals(8)){
+    }else if(second.equals("8")){
       answer+= "X";
     }else{ //9
       answer += "Y";
@@ -348,3 +348,34 @@ public class Prog607a {
   }
   //done 
 }
+
+/*
+-----menu-----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option 1
+
+enter date(m/d/y) 09/14/83
+The code is: IQTN
+
+
+-----menu-----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option 2
+
+enter code AOQV
+The date is: 1/1/1975
+
+
+-----menu-----
+0) Quit
+1) Encode Date
+2) Decode Date
+Select an option 0
+
+Process finished with exit code 0
+
+ */
