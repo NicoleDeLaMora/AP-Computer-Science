@@ -23,5 +23,5 @@ public class Beeper extends Animal{
 
 */
   
-    public String getExtraWord(){return extraWord;}
+    public String getExtraWord(){return extraWord.toLowerCase();}
 }
