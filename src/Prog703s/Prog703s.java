@@ -71,3 +71,8 @@ public class Prog703s{
        }
   }
 }
+/*
+There are 1 Apple computers colored Green or Gold.
+There are 2 Window computers with version 7.0.
+There are 4 Linux computers with codes ending with 5.
+ */
