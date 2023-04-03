@@ -1,3 +1,5 @@
+package Q3.SteganographyLab.StegStudentCode;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.*;

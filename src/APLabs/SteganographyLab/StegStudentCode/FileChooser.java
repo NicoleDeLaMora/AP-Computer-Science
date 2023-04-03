@@ -1,3 +1,5 @@
+package Q3.SteganographyLab.StegStudentCode;
+
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import java.util.Properties;

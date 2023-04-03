@@ -1,3 +1,5 @@
+package Q3.SteganographyLab.StegStudentCode;
+
 import java.awt.Color;
 
 /**
