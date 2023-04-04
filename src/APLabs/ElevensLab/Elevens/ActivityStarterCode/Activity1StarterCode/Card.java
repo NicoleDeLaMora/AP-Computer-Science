@@ -1,4 +1,4 @@
-package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity1StarterCode;
+package APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity1StarterCode;
 
 /**
  * Card.java
@@ -34,7 +34,9 @@ public class Card {
 	 *                  containing the point value of the card
 	 */
 	public Card(String cardRank, String cardSuit, int cardPointValue) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+		suit = cardSuit;
+		rank = cardRank;
+		pointValue = cardPointValue;
 	}
 
 
@@ -42,25 +44,19 @@ public class Card {
 	 * Accesses this <code>Card's</code> suit.
 	 * @return this <code>Card's</code> suit.
 	 */
-	public String suit() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-   }
+	public String suit() {return suit;}
 
 	/**
 	 * Accesses this <code>Card's</code> rank.
 	 * @return this <code>Card's</code> rank.
 	 */
-	public String rank() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-	}
+	public String rank() {return rank;}
 
    /**
 	 * Accesses this <code>Card's</code> point value.
 	 * @return this <code>Card's</code> point value.
 	 */
-	public int pointValue() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-	}
+	public int pointValue() {return pointValue;}
 
 	/** Compare this card with the argument.
 	 * @param otherCard the other card to compare to this
@@ -69,7 +65,14 @@ public class Card {
 	 *         false otherwise.
 	 */
 	public boolean matches(Card otherCard) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+		if(otherCard.rank.equals(this.rank())){
+			if(otherCard.suit.equals(this.suit)){
+				if(otherCard.pointValue == this.pointValue){
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
 	/**
@@ -84,6 +87,8 @@ public class Card {
 	 */
 	@Override
 	public String toString() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+		String ans = "";
+		ans = this.rank + " of " + this.suit + "(point value = " + pointValue + ".";
+		return ans;
 	}
 }
