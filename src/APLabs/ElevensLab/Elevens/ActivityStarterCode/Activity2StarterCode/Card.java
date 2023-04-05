@@ -1,4 +1,4 @@
-package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity2StarterCode;
+package APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity2StarterCode;
 
 /**
  * Card.java

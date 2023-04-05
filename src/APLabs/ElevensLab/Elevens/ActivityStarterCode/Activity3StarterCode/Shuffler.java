@@ -1,4 +1,6 @@
-package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity3StarterCode;
+package APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity3StarterCode;
+
+import APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity1StarterCode.Card;
 
 /**
  * This class provides a convenient way to test shuffling methods.
@@ -51,8 +53,18 @@ public class Shuffler {
 	 * the cards in one half with the cards in the other.
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
+	/*
+	For k = 51 down to 1,
+− Generate a random integer r between 0 and k, inclusive;
+− Exchange cards[k] and cards[r].
+This has the same structure as selection sort:
+For k = 51 down to 1,
+− Find r, the position of the largest value among cards[0] through cards[k];
+− Exchange cards[k] and cards[r].
+	 */
 	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		Card[] shuffled = new Card[52];
+		int k = 0;
 	}
 
 	/**

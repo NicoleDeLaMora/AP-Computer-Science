@@ -1,4 +1,5 @@
-package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity2StarterCode;
+package APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity2StarterCode;
+
 
 /**
  * This is a class that tests the Deck class.
@@ -10,6 +11,14 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+
+		String[] ranks = {"Eight", "Queen", "Ace"};
+		String[] suits = {"Hearts", "Spades", "Diamond"};
+		int[] values = {11, 18, 50};
+		Deck cards = new Deck(ranks, suits, values);
+		System.out.println("The deck is empty: " + cards.isEmpty());
+		System.out.println("The size of the deck is: " + cards.size());
+		System.out.println("Your card is: " + cards.deal());
+		System.out.println("The undelt cards are: " + cards.toString());
 	}
 }

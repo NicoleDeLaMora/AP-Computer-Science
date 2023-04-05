@@ -10,9 +10,14 @@ public class CardTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
- 		Card wow = new Card("Eight", "Hearts", 11);
+ 		 Card wow = new Card("Eight", "Hearts", 11);
 		 Card now = new Card("Queen", "Spades", 18);
-		 Card pow = new Card("Ace", "culbs", 100);
+		 Card pow = new Card("Eight", "Hearts", 11);
+
+		 System.out.println(now.toString());
+		 System.out.println("First card and Third card are the same: " + wow.matches(pow));
+
+
 
 
 

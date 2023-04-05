@@ -1,4 +1,4 @@
-package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity2StarterCode;
+package APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity2StarterCode;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -32,7 +32,11 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		ArrayList<Card> cards = new ArrayList<Card>();
+		for(int lcv = 0; lcv < suits.length; lcv++){
+			Card wow = new Card(ranks[lcv], suits[lcv], values[lcv]);
+			cards.add(wow);
+		}
 	}
 
 
@@ -41,7 +45,7 @@ public class Deck {
 	 * @return true if this deck is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		return cards.size() == 0;
 	}
 
 	/**
@@ -49,7 +53,7 @@ public class Deck {
 	 * @return the number of undealt cards in this deck.
 	 */
 	public int size() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		return cards.size();
 	}
 
 	/**
@@ -66,7 +70,12 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if(size == 0)return null;
+		else {
+			Card pow = cards.get(size);
+			size--;
+			return pow;
+		}
 	}
 
 	/**
