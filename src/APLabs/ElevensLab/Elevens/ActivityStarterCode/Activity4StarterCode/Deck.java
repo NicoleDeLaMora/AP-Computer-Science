@@ -3,6 +3,8 @@ package APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity4StarterCode;
 import java.util.List;
 import java.util.ArrayList;
 
+import static APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity3StarterCode.Shuffler.selectionShuffle;
+
 /**
  * The Deck class represents a shuffled deck of cards.
  * It provides several operations including
@@ -65,7 +67,10 @@ public class Deck {
 	 */
 	public void shuffle() {
 		size = 52;
-		shuffle(cards);
+		int[] val = new int[cards.size()];
+		for(int l = 0; l < cards.size(); l++)
+			val[l] = cards.get(l).pointValue();
+		selectionShuffle(val);
 	}
 
 	/**

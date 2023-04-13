@@ -62,7 +62,7 @@ For k = 51 down to 1,
 − Find r, the position of the largest value among cards[0] through cards[k];
 − Exchange cards[k] and cards[r].
 	 */
-	public static void perfectShuffle(int[] values) {
+	public static void perfectShuffle(int[] values) { //unfinished
 		Card[] shuffled = new Card[52];
 		int k = 0;
 	}

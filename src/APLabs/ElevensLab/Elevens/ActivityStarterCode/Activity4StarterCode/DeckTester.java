@@ -1,4 +1,6 @@
-package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity4StarterCode;
+package APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity4StarterCode;
+
+import APLabs.ElevensLab.Elevens.ActivityStarterCode.Activity4StarterCode.Deck;
 
 /**
  * This is a class that tests the Deck class.
@@ -10,9 +12,9 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		String[] ranks = {"jack", "queen", "king"};
+		String[] ranks = {"jack", "queen", "king", "ace"};
 		String[] suits = {"blue", "red"};
-		int[] pointValues = {11, 12, 13};
+		int[] pointValues = {11, 12, 13, 20};
 		Deck d = new Deck(ranks, suits, pointValues);
 
 		System.out.println("**** Original Deck Methods ****");
@@ -53,6 +55,15 @@ public class DeckTester {
 		System.out.println();
 		System.out.println();
 
-		/* *** TO BE COMPLETED IN ACTIVITY 4 *** */
+
+
+		int[] vals = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+		String[] rank = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"};
+		for(int l = 0; l < 52; l++){
+			Deck cards = new Deck(rank, suits, vals);
+		}
+
+
 	}
 }
+//this is overwhelming
