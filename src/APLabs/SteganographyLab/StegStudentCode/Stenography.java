@@ -41,7 +41,7 @@ public class Stenography {
         int gNew = c.getGreen() + gLow;
         int bNew = c.getBlue() + bLow;
 
-        c = Color(rNew, gNew, bNew);  //i cant figure this shi sout
+        //HAHAHAHAHAHAHAHAHAHAHAHAHAc = Color(rNew, gNew, bNew);  //i cant figure this shi sout
     }
     public static Picture testSetLow(Picture p, Color c){
 
@@ -59,5 +59,16 @@ public class Stenography {
         }
         return copy;
 
+    }
+    public static boolean canHide(Picture source, Picture secret){
+        if(source.getWidth() == secret.getWidth()){
+            if(secret.getHeight() == source.getHeight())
+                    return true;
+        }
+        return false;
+    }
+
+    public static Picture hidePicture(Picture source, Picture secret){
+        return null;
     }
 }
