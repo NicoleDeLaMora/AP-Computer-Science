@@ -41,11 +41,16 @@ public class Stenography {
         int gNew = c.getGreen() + gLow;
         int bNew = c.getBlue() + bLow;
 
-        //HAHAHAHAHAHAHAHAHAHAHAHAHAc = Color(rNew, gNew, bNew);  //i cant figure this shi sout
+        //AHAHAHAHAHAHAHAHAHAHAHAHAHAHc = Color(rNew, gNew, bNew);  //i cant figure this shi sout
     }
     public static Picture testSetLow(Picture p, Color c){
 
-        return null;
+        for(int h = 0; h < p.getHeight(); h++){
+            for(int w = 0; w < p.getWidth(); w++){
+                setLow(p.getPixel(h, w), c);
+            }
+        }
+        return p;
     }
     public static Picture revealPicture(Picture hidden){
         Picture copy = new Picture(hidden);
