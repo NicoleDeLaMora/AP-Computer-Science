@@ -56,14 +56,16 @@ public class DeckTester {
 		System.out.println();
 
 
-
+    Card[] theDeck = new Card[52];
 		int[] vals = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 		String[] rank = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"};
 		for(int l = 0; l < 52; l++){
 			Deck cards = new Deck(rank, suits, vals);
-		}
-
-
+		    
+    }
+    
+    Shuffle();
+    
 	}
 }
 //this is overwhelming

@@ -41,7 +41,8 @@ public class Deck {
 			}
 		}
 		size = cards.size();
-		shuffle();
+    Card[] car = new Card[cards.size()-1];
+		selectionShuffle(values);
 	}
 
 
@@ -70,7 +71,8 @@ public class Deck {
 		int[] val = new int[cards.size()];
 		for(int l = 0; l < cards.size(); l++)
 			val[l] = cards.get(l).pointValue();
-		selectionShuffle(val);
+		shuffle();
+    size = 0;
 	}
 
 	/**

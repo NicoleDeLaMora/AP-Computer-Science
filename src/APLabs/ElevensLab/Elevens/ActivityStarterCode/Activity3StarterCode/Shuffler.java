@@ -44,6 +44,8 @@ public class Shuffler {
 			System.out.println();
 		}
 		System.out.println();
+
+    
 	}
 
 
@@ -62,10 +64,22 @@ For k = 51 down to 1,
 − Find r, the position of the largest value among cards[0] through cards[k];
 − Exchange cards[k] and cards[r].
 	 */
-	public static void perfectShuffle(int[] values) { //unfinished
-		Card[] shuffled = new Card[52];
-		int k = 0;
-	}
+	public static void perfectShuffle(int[] values) { //finished
+		int [] shuffled = new int[52];
+    int k = 0;
+    for(int j = 0; j < 25; j++){
+      shuffled[k] = values[j];
+      k+=2;
+    }
+    k = 1;
+    for(int j = 26; j < 51; j++){
+      shuffled[k] = values[j];
+      k+=2;
+    }
+    }
+
+    
+	
 
 	/**
 	 * Apply an "efficient selection shuffle" to the argument.
@@ -78,7 +92,7 @@ For k = 51 down to 1,
 	 * searching for an as-yet-unselected card.
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
-	public static void selectionShuffle(int[] values) { //UNFINISHED
+	public static void selectionShuffle(int[] values) { //FINISHED
 		int[] shuffled = new int[52];
 		for(int k = shuffled.length-1; k > 0; k--){
 			int r =  (int)(Math.random() * (k-1)) + 1;
