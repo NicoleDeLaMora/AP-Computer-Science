@@ -33,13 +33,14 @@ public class Stenography {
 
     //set the lower 2 bits in a pixel to the gighest 2 bits in c
     public static void setLow(Pixel p, Color c){
-        int rLow = ((int)(p.getRed() / 4) * 4);
-        int gLow = ((int)(p.getGreen() / 4) * 4);
-        int bLow = ((int)(p.getBlue() / 4) * 4);
+        int rLow = ((int)(p.getRed() / 12));
+        int gLow = ((int)(p.getGreen() / 12));
+        int bLow = ((int)(p.getBlue() / 12));
 
         int rNew = c.getRed() + rLow;
         int gNew = c.getGreen() + gLow;
         int bNew = c.getBlue() + bLow;
+
 
         //AHAHAHAHAHAHAHAHAHAHAHAHAHAHc = Color(rNew, gNew, bNew);  //i cant figure this shi sout
     }
@@ -52,6 +53,7 @@ public class Stenography {
         }
         return p;
     }
+
     public static Picture revealPicture(Picture hidden){
         Picture copy = new Picture(hidden);
         Pixel[][] pixels = copy.getPixels2D();
@@ -74,6 +76,23 @@ public class Stenography {
     }
 
     public static Picture hidePicture(Picture source, Picture secret){
+      Picture ans = new Picture();
+       if(canHide(source, secret)){
+           for(int h = 0; h < secret.getHeight(); h++){
+               for(int w = 0; w < secret.getWidth(); w++){
+                   testSetLow(secret.getPixel(h, w), source.getColor());
+               }
+           }
+
+
+
+
+
+
+       }
+
+
+
         return null;
     }
 }
