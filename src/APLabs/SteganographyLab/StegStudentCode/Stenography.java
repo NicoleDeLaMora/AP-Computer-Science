@@ -17,6 +17,7 @@ public class Stenography {
         copy3.explore();
 
     }
+
     public static Picture testClearLow(Picture q){
         int h = q.getHeight();
         int w = q.getWidth();
@@ -42,7 +43,7 @@ public class Stenography {
         int bNew = c.getBlue() + bLow;
 
 
-        //AHAHAHAHAHAHAHAHAHAHAHAHAHAHc = Color(rNew, gNew, bNew);  //i cant figure this shi sout
+        c = new Color(rNew, gNew, bNew);  //i cant figure this shi sout
     }
     public static Picture testSetLow(Picture p, Color c){
 
@@ -80,7 +81,9 @@ public class Stenography {
        if(canHide(source, secret)){
            for(int h = 0; h < secret.getHeight(); h++){
                for(int w = 0; w < secret.getWidth(); w++){
-                   testSetLow(secret.getPixel(h, w), source.getColor());
+                   Pixel pi = new Pixel(source, h, w);
+                   Color c = new Color(pi.getRed(), pi.getGreen(), pi.getBlue());
+                   testSetLow(secret, c);
                }
            }
 
