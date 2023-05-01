@@ -43,7 +43,7 @@ public class Stenography {
         int bNew = c.getBlue() + bLow;
 
 
-        c = new Color(rNew, gNew, bNew);  //i cant figure this shi sout
+        c = new Color(rNew, gNew, bNew);  //i can figure this shi sout
     }
     public static Picture testSetLow(Picture p, Color c){
 
@@ -55,6 +55,9 @@ public class Stenography {
         return p;
     }
 
+    /*
+    Sets the highest two bits of each pixel's colors to the lowest two bits of each pixels color
+     */
     public static Picture revealPicture(Picture hidden){
         Picture copy = new Picture(hidden);
         Pixel[][] pixels = copy.getPixels2D();
@@ -62,7 +65,12 @@ public class Stenography {
         for(int r = 0; r < pixels.length; r++){
             for(int c = 0; c < pixels[0].length; c++){
                 Color col = source[r][c].getColor();
-                /*to be implemented*/
+                setLow(pixels[r][c], col);
+                pixels[r][c] = //rightmost 2 bits of col
+                //to cheange the left most 2 bits, divide by four, add the 2 bits, multiply by four
+                int rLow = (((int)(pixels[r][c].getRed() / 4) + (col.getRed() / 64)* 4);
+                int gLow = (((int)(pixels[r][c].getGreen() / 4) + (col.getGreen() / 64)) * 4);
+                int bLow = (((int)(pixels[r][c].getBlue() / 4) + (col.getBlue() / 64)) * 4);
             }
         }
         return copy;
