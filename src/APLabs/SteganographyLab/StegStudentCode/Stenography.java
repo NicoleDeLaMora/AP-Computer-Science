@@ -65,10 +65,8 @@ public class Stenography {
         for(int r = 0; r < pixels.length; r++){
             for(int c = 0; c < pixels[0].length; c++){
                 Color col = source[r][c].getColor();
-                setLow(pixels[r][c], col);
-                pixels[r][c] = //rightmost 2 bits of col
                 //to cheange the left most 2 bits, divide by four, add the 2 bits, multiply by four
-                int rLow = (((int)(pixels[r][c].getRed() / 4) + (col.getRed() / 64)* 4);
+                int rLow = (((int)(pixels[r][c].getRed() / 4) + (col.getRed() / 64))* 4);
                 int gLow = (((int)(pixels[r][c].getGreen() / 4) + (col.getGreen() / 64)) * 4);
                 int bLow = (((int)(pixels[r][c].getBlue() / 4) + (col.getBlue() / 64)) * 4);
             }
