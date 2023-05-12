@@ -28,7 +28,7 @@ public class LinearRegression {
                     double temp = (theta1 * X_train[i][0] + theta1 - Y_train[i]);
                     //perdicted label - actual label
                     temp0 += temp;
-                    temp1 += temp * X_train[1][0];
+                    temp1 += temp * X_train[i][0];
                 }
                 //gradient descent algorithm
                 theta0 -= (1.0 / m) * alpha * temp0;
@@ -39,9 +39,9 @@ public class LinearRegression {
                 e[i] = theta1 * X_train[i][0] + theta0 - Y_train[i]; //cost function
             }
             double obj = 0;
-            for (int i = 0; i < m; i++) {
+            for (int i = 0; i < m; i++)
                 obj += e[i] * e[i];
-            }
+
             objectives[epoch] = obj;
 
             if (epoch > 1 && (Math.abs(objectives[epoch] - objectives[epoch - 1]) < tolerance))
