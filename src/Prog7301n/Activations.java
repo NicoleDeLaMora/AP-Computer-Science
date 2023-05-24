@@ -20,4 +20,6 @@ public class Activations {
         public double activate(double Value){return Math.max(0, Value);}
         public double activateDeriv(double Value){return Value >= 0 ? 1 : 0;}
     }
+
+
 }
