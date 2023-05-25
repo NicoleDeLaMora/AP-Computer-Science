@@ -1,4 +1,4 @@
-package Prog7301n;
+package Prog7301m;
 import java.util.Arrays;
 public class NNTest {
     //Test MLP using XOR dataset

@@ -1,4 +1,4 @@
-package Prog7301n;
+package Prog7301m;
 
 public class Activations {
     interface Activation{
