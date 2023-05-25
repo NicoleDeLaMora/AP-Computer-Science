@@ -39,25 +39,57 @@ public class MultiLayerPerceptron {
         return feedForward(input);
     }
 
-    public double backPropagate(double[] input. double[] output){
-    double[] result = feedForward(input);
-    double error = 0;
+    public double backPropagate(double[] input, double[] output) {
+        double[] result = feedForward(input);
+        double error = 0.0;
 
+        for (int i = 0; i < flayers[flayers.length-1].size; i++) {
+            error = output[i] - result[i];
+            flayers[flayers.length-1].Nuerons[i].Delta = error * fActivation.activateDeriv(result[i]);
+        }
 
-    return error;
+        for (int k = flayers.length-2; k >= 0; k--) {
+            for (int i = 0; i < flayers[k].size; i++) {
+                error = 0;
+                for (int j = 0; j < flayers[k+1].size; j++)
+                    error += flayers[k+1].Nuerons[j].Delta * flayers[k+1].Nuerons[j].Weights[i];
+                flayers[k].Nuerons[i].Delta = error *
+                        fActivation.activateDeriv(flayers[k].Nuerons[i].Value);
+            }
+            for (int i = 0; i < flayers[k+1].size; i++) {
+                for (int j = 0; j < flayers[k].size; j++)
+                    flayers[k+1].Nuerons[i].Weights[j] += fLearningRate *
+                            flayers[k+1].Nuerons[i].Delta * flayers[k].Nuerons[j].Value;
+                flayers[k+1].Nuerons[i].Bias += fLearningRate * flayers[k+1].Nuerons[i].Delta;
+            }
+        }
+
+        error = 0.0;
+        for (int i = 0; i < output.length; i++) error += Math.abs(result[i]-output[i]);
+        error /= output.length;
+        return error;
     }
 
-    public void train(double[][] X_train, double[][] y_train, int ephocs){
-        for(int epoch = 0; epoch < ephocs; ephocs++){
+    public void train(double[][] X_train, double[][] y_train, int epochs) {
+        for (int epoch = 0; epoch < epochs; epoch++) {
             double loss = 0;
-            for(int i = 0; i < X_train.length, i++){
+            for (int i = 0; i < X_train.length; i++)
                 loss += backPropagate(X_train[i], y_train[i]);
-            }
             loss /= X_train.length;
-            System.out.println("Epoch %d: \tLoss: %.6f\t\tAccuracy : %.6f\n", (epoch+1, loss, accuracy(X_train, y_train)));
-
+            System.out.printf("Epoch %d:\tLoss: %.6f\t\tAccuracy: %.6f\n",
+                    (epoch+1), loss, accuracy(X_train, y_train));
         }
     }
-    public double accuracy(double[][] input, double[][] output){return null;}
+
+    public double accuracy(double[][] input, double[][] output){
+        double error = 0;
+        for(int i = 0; i < input.length; i++){
+            double[] result = feedForward(input[i]);
+            for(int j = 0; j < output[i].length; j++){
+                error+= Math.abs(result[j] - output[i][j]);
+            }
+        }
+        return 1 - error / (input.length * output[0].length);
+    }
 
 }
