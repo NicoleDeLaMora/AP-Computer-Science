@@ -1,5 +1,10 @@
+package Prog7301m.TrainLab;
+
+import Prog7301m.Activations;
+import Prog7301m.MultiLayerPerceptron;
 import java.util.*;
 import java.io.*;
+
 public class IrisTest {
 public static int argmax(double[] a) {
   int max = 0;
@@ -10,7 +15,7 @@ public static int argmax(double[] a) {
 public static void main(String[] args) {
   try {
   // Training Data
-    String[] labels = { "Iris-setosa", "Iris-versicolor", "Iris-        virginica" };
+    String[] labels = { "Iris-setosa", "Iris-versicolor", "Iris-virginica" };
     Scanner input = new Scanner(new File("data/IrisLab.csv"));
     ArrayList<Double[]> Xtr = new ArrayList<Double[]>();
     ArrayList<Double[]> ytr = new ArrayList<Double[]>();
@@ -52,7 +57,7 @@ public static void main(String[] args) {
 // int hiddenNeurons = 10; // Also try (int)Math.sqrt(inputs*outputs);
   int hiddenL1 = outputs * 6;
   int hiddenL2 = outputs * 3;
-  var model = new MultiLayerPerceptron(new int[]{ inputs, hiddenL1,   hiddenL2, outputs }, 0.1, new Activations.ReLU());
+  var model = new MultiLayerPerceptron(new int[]{ inputs, hiddenL1,   hiddenL2, outputs }, 0.01, new Activations.Sigmoid());
   model.train(X_train, y_train, 10);
   System.out.println("Final Accuracy: " + model.accuracy(X_test,   y_test));
 // Pick a random sample from the test set
@@ -69,3 +74,21 @@ System.out.println("Cannot find file");
 }
 }
 }
+/*
+C:\Users\delamora.n\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=55752:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\delamora.n\Desktop\AP Computer Science\out\production\AP Computer Science" Prog7301m.TrainLab.IrisTest
+Epoch 1:	Loss: 0.289686		Accuracy: 0.504240
+Epoch 2:	Loss: 0.266542		Accuracy: 0.550183
+Epoch 3:	Loss: 0.239321		Accuracy: 0.612981
+Epoch 4:	Loss: 0.216740		Accuracy: 0.662144
+Epoch 5:	Loss: 0.202975		Accuracy: 0.672642
+Epoch 6:	Loss: 0.194437		Accuracy: 0.679658
+Epoch 7:	Loss: 0.185802		Accuracy: 0.685206
+Epoch 8:	Loss: 0.177124		Accuracy: 0.688798
+Epoch 9:	Loss: 0.168566		Accuracy: 0.690932
+Epoch 10:	Loss: 0.160269		Accuracy: 0.692395
+Final Accuracy: 0.827526816143221
+Predicted: Iris-virginica	Actual: Iris-virginica
+
+Process finished with exit code 0
+
+ */
