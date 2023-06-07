@@ -30,7 +30,7 @@ public static void main(String[] args) {
       }
         
       label_onehot[label] = 1.0;
-      label_onehot[label+1] = 1.0;
+     
       for (int i = 0; i < line.length; i++){
         if(i != 3 || i != 4){
            row[i - 1] = Double.parseDouble(line[i]);
